@@ -1,0 +1,37 @@
+.primaryButton {
+    padding: 16px 34px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: #8A72E8;
+    color: white;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+.primaryButton:hover {
+    background: #755ce0;
+    transform: translateY(-2px);
+}
+
+
+.lockedButton {
+    padding: 16px 34px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: #E7E7E7;
+    color: #777;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    cursor: not-allowed;
+}

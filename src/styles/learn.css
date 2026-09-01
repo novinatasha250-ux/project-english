@@ -1,0 +1,110 @@
+.lessonTitle {
+    font-size: 3.2rem;
+    margin: 6px 0;
+    line-height: 1.1;
+}
+.lessonSubtitle {
+    font-size: 1.4rem;
+    margin-bottom: 36px;
+    color: #6f6486;
+    margin-bottom: 28px;
+}
+
+.projectLabel {
+    color: #7d68f2;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: 12px;
+}
+
+.lessonProgress {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 42px;
+}
+
+.lessonProgress span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #d8d4e8;
+}
+
+.lessonProgress .activeDot {
+    background: #7d68f2;
+}
+
+.grammarCards {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+    max-width: 620px;
+    margin: auto;
+}
+
+.grammarCard {
+    background: white;
+    border-radius: 24px;
+    padding: 22px 28px;
+    box-shadow: 0 14px 40px rgba(0,0,0,.08);
+}
+
+.grammarCard h2 {
+    font-size: 2rem;
+    margin: 8px 0;
+}
+
+.grammarCard h3 {
+    color: #665b81;
+    margin-bottom: 20px;
+}
+
+.grammarCard p {
+    margin: 10px 0;
+    font-size: 1.15rem;
+}
+
+.grammarIcon {
+    font-size: 2rem;
+}
+
+.nextLessonCard {
+    margin: 50px auto 20px;
+    max-width: 620px;
+
+    background: white;
+    border-radius: 24px;
+
+    padding: 36px;
+
+    box-shadow: 0 14px 40px rgba(0,0,0,.08);
+
+    text-align: center;
+}
+
+.backButton {
+    background: none;
+    border: none;
+
+    font-size: 1rem;
+
+    color: #6f6486;
+
+    cursor: pointer;
+
+    margin-bottom: 20px;
+}
+
+.backButton:hover {
+    color: #7d68f2;
+}
+.cardHeading{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+
+    margin-bottom:12px;
+}

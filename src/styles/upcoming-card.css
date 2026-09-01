@@ -1,0 +1,19 @@
+.upcomingCard {
+    background: #F8F7FF;
+
+    border-radius: 24px;
+    padding: 28px;
+
+    text-align: center;
+
+    border: 2px dashed #D8D1FF;
+}
+
+.upcomingCard h3 {
+    margin: 0 0 14px;
+
+    font-size: 32px;
+    font-weight: 700;
+
+    color: #17141F;
+}

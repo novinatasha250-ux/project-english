@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+
+    background: #EEF5FF;
+    font-family: Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.app {
+    display: flex;
+    justify-content: center;
+
+    padding: 30px;
+}
+
+.card {
+    width: min(1250px, 100%);
+
+    background: #ffffff;
+    border-radius: 28px;
+
+    padding: 60px 70px;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}

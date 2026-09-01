@@ -1,0 +1,33 @@
+.projectCard {
+    background: #fff;
+    border-radius: 24px;
+    padding: 28px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 24px rgba(0,0,0,.06);
+}
+
+.projectNumber {
+    font-size: 16px;
+    font-weight: 600;
+    color: #8A72E8;
+
+    margin-bottom: 14px;
+}
+
+.projectCard h3 {
+    margin: 0 0 14px;
+
+    font-size: 32px;
+    font-weight: 700;
+
+    color: #17141F;
+}
+
+.projectInfo {
+    margin-bottom: 28px;
+
+    color: #666;
+    font-size: 18px;
+}
