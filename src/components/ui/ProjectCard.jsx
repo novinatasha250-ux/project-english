@@ -1,7 +1,11 @@
+import { useNavigate } from "react-router-dom";
+
 import "../../styles/project-card.css";
 import PrimaryButton from "./PrimaryButton";
 
-export default function ProjectCard({ onStart }) {
+export default function ProjectCard() {
+  const navigate = useNavigate();
+
   return (
     <div className="projectCard">
 
@@ -17,7 +21,9 @@ export default function ProjectCard({ onStart }) {
         A2 • 15 min
       </p>
 
-      <PrimaryButton onClick={onStart}>
+      <PrimaryButton
+        onClick={() => navigate("/project01")}
+      >
         Start Project
       </PrimaryButton>
 

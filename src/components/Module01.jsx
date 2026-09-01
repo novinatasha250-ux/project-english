@@ -1,17 +1,17 @@
+import { useNavigate } from "react-router-dom";
+
 import "../styles/module.css";
 import PrimaryButton from "./ui/PrimaryButton";
 
-export default function Module01({
-  onBack,
-  onOpenGrammar,
-  onOpenHomework,
-}) {
+export default function Module01() {
+  const navigate = useNavigate();
+
   return (
     <div className="modulePage">
 
       <button
         className="backButton"
-        onClick={onBack}
+        onClick={() => navigate("/")}
       >
         ← Back
       </button>
@@ -28,17 +28,17 @@ export default function Module01({
         AT • ON • IN
       </p>
 
-      {/* Grammar */}
+      {/* Lesson */}
 
       <div className="resourceCard">
 
         <div>
           <h2>📚 Lesson</h2>
-<p>Grammar • Examples • Quiz</p>
+          <p>Grammar • Examples • Quiz</p>
         </div>
 
         <PrimaryButton
-          onClick={onOpenGrammar}
+          onClick={() => navigate("/project01/grammar")}
         >
           Open
         </PrimaryButton>
@@ -55,7 +55,7 @@ export default function Module01({
         </div>
 
         <PrimaryButton
-          onClick={onOpenHomework}
+          onClick={() => alert("Homework coming soon!")}
         >
           Open
         </PrimaryButton>

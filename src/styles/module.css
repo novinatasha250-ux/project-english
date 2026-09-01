@@ -2,99 +2,116 @@
    PAGE
 ========================================== */
 
-.modulePage{
-    max-width:900px;
-    margin:0 auto;
-    padding:40px 20px 80px;
-    text-align:center;
+.modulePage {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+    text-align: center;
 }
 
 /* ==========================================
    BACK BUTTON
 ========================================== */
 
-.backButton{
-    border:none;
-    background:none;
-    cursor:pointer;
+.backButton {
+    border: none;
+    background: none;
+    cursor: pointer;
 
-    color:#666;
-    font-size:18px;
-    font-weight:600;
+    color: #666;
+    font-size: 18px;
+    font-weight: 600;
 
-    margin-bottom:30px;
+    margin-bottom: 34px;
+
+    transition: .2s;
 }
 
-.backButton:hover{
-    color:#7D6AF2;
+.backButton:hover {
+    color: #7D6AF2;
 }
 
 /* ==========================================
    HEADER
 ========================================== */
 
-.projectLabel{
-    color:#7D6AF2;
-    font-size:28px;
-    font-weight:700;
+.projectLabel {
+    color: #7D6AF2;
+    font-size: 30px;
+    font-weight: 700;
 
-    margin-bottom:10px;
+    margin-bottom: 12px;
 }
 
-.moduleTitle{
-    margin:0;
+.moduleTitle {
+    margin: 0;
 
-    font-size:64px;
-    font-weight:800;
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 1;
 
-    color:#17141F;
+    color: #17141F;
 }
 
-.moduleSubtitle{
-    margin:18px 0 60px;
+.moduleSubtitle {
+    margin-top: 12px;
+    margin-bottom: 64px;
 
-    font-size:28px;
-    color:#666;
+    font-size: 28px;
+    color: #666;
 }
 
 /* ==========================================
    RESOURCE CARD
 ========================================== */
 
-.resourceCard{
+.resourceCard {
+    display: flex;
+    align-items: center;
+    gap: 30px;
 
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    padding: 36px 42px;
 
-    padding:34px 40px;
+    background: white;
+    border-radius: 28px;
 
-    background:white;
+    box-shadow: 0 12px 35px rgba(0,0,0,.08);
 
-    border-radius:24px;
+    margin-bottom: 28px;
 
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    text-align: left;
 
-    margin-bottom:28px;
-
-    text-align:left;
+    transition: .2s;
 }
 
-.resourceCard h2{
-
-    margin:0 0 8px;
-
-    font-size:34px;
-    font-weight:700;
-
-    color:#17141F;
+.resourceCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px rgba(0,0,0,.10);
 }
 
-.resourceCard p{
+.resourceCard > div {
+    flex: 1;
+}
 
-    margin:0;
+.resourceCard h2 {
+    margin: 0 0 10px;
 
-    font-size:22px;
+    font-size: 34px;
+    font-weight: 700;
 
-    color:#666;
+    color: #17141F;
+}
+
+.resourceCard p {
+    margin: 0;
+
+    font-size: 22px;
+    color: #666;
+
+    line-height: 1.35;
+}
+
+.resourceCard button {
+    flex-shrink: 0;
+    margin-right: 4px;
 }

@@ -1,17 +1,18 @@
+import { useNavigate } from "react-router-dom";
+
 import PrimaryButton from "./ui/PrimaryButton";
 import "../styles/learn.css";
 
-export default function Learn01({
-  onBack,
-  onContinue,
-}) {
+export default function Learn01() {
+  const navigate = useNavigate();
+
   return (
     <div className="app">
       <div className="card">
 
         <button
           className="backButton"
-          onClick={onBack}
+          onClick={() => navigate("/project01")}
         >
           ← Back
         </button>
@@ -92,7 +93,7 @@ export default function Learn01({
           </p>
 
           <PrimaryButton
-            onClick={onContinue}
+            onClick={() => navigate("/project01/practice")}
           >
             Continue →
           </PrimaryButton>

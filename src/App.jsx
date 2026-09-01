@@ -1,37 +1,42 @@
-import { useState } from "react";
-import "./App.css";
+import { Routes, Route } from "react-router-dom";
 
 import Home from "./components/Home";
-import Project01 from "./components/Project01";
 import Module01 from "./components/Module01";
 import Learn01 from "./components/Learn01";
+import Project01 from "./components/Project01";
 
 export default function App() {
-  const [page, setPage] = useState("home");
-
   return (
-    <>
-      {page === "home" && (
-        <Home onStart={() => setPage("module1")} />
-      )}
+    <Routes>
 
-      {page === "module1" && (
-  <Module01
-    onBack={() => setPage("home")}
-    onOpenGrammar={() => setPage("learn1")}
-    onOpenHomework={() => alert("Homework coming soon!")}
-  />
-)}
+      <Route
+        path="/"
+        element={
+          <Home />
+        }
+      />
 
-      {page === "learn1" && (
-        <Learn01
-          onContinue={() => setPage("project1")}
-        />
-      )}
+      <Route
+        path="/project01"
+        element={
+          <Module01 />
+        }
+      />
 
-      {page === "project1" && (
-        <Project01 />
-      )}
-    </>
+      <Route
+        path="/project01/grammar"
+        element={
+          <Learn01 />
+        }
+      />
+
+      <Route
+        path="/project01/practice"
+        element={
+          <Project01 />
+        }
+      />
+
+    </Routes>
   );
 }
