@@ -14,7 +14,7 @@ export default function ProjectCard() {
       </div>
 
       <h3>
-        Time & Place
+        Time
       </h3>
 
       <p className="projectInfo">

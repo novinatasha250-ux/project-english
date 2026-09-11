@@ -43,7 +43,7 @@ if (!started) {
       <div className="card">
         <h1>📐 Project English</h1>
 
-        <h2>Project 01 — Time & Place</h2>
+        <h2>Project 01 — Time </h2>
 
         <p>Please enter your name to start.</p>
 
@@ -90,7 +90,7 @@ if (!started) {
           <h2>
             Score: {score} / {questions.length}
           </h2><p>
-  You have successfully completed <b>Project 01 – Time & Place</b>.
+  You have successfully completed <b>Project 01 – Time</b>.
 </p><button
   className="mainButton"
   onClick={() => {
@@ -98,7 +98,7 @@ if (!started) {
 
 My name is ${studentName}.
 
-I completed Project 01 – Time & Place.
+I completed Project 01 – Time.
 
 My score: ${score}/${questions.length}.
 
@@ -137,7 +137,7 @@ See you in class!`;
       <div className="card">
         <h1>📐 Project English</h1>
 
-        <h2>Project 01 — Time & Place</h2>
+        <h2>Project 01 — Time </h2>
 
         <p>
           Question {current + 1} / {questions.length}

@@ -21,7 +21,7 @@ export default function Module01() {
       </p>
 
       <h1 className="moduleTitle">
-        Time & Place
+        Time
       </h1>
 
       <p className="moduleSubtitle">
@@ -55,7 +55,7 @@ export default function Module01() {
         </div>
 
         <PrimaryButton
-          onClick={() => alert("Homework coming soon!")}
+          onClick={() => navigate("/project01/homework/email")}
         >
           Open
         </PrimaryButton>

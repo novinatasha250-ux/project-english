@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import PrimaryButton from "./ui/PrimaryButton";
 import "../styles/learn.css";
 
-export default function Learn01() {
+export default function Examples01() {
   const navigate = useNavigate();
 
   return (
@@ -12,7 +12,7 @@ export default function Learn01() {
 
         <button
           className="backButton"
-          onClick={() => navigate("/project01")}
+          onClick={() => navigate("/project01/grammar")}
         >
           ← Back
         </button>
@@ -22,16 +22,16 @@ export default function Learn01() {
         </p>
 
         <h1 className="lessonTitle">
-          Grammar
+          Examples
         </h1>
 
         <p className="lessonSubtitle">
-          Time 
+          Time
         </p>
 
         <div className="lessonProgress">
-          <span className="activeDot"></span>
           <span className="progressDot"></span>
+          <span className="activeDot"></span>
           <span className="progressDot"></span>
         </div>
 
@@ -46,9 +46,9 @@ export default function Learn01() {
 
             <h3>Exact Times</h3>
 
-            <p>at 7:00</p>
-            <p>at noon</p>
-            <p>at midnight</p>
+            <p>We start work <strong>at 8:00</strong>.</p>
+            <p>We have lunch <strong>at noon</strong>.</p>
+            <p>I usually go to bed <strong>at midnight</strong>.</p>
 
           </div>
 
@@ -61,9 +61,9 @@ export default function Learn01() {
 
             <h3>Days & Dates</h3>
 
-            <p>on Monday</p>
-            <p>on 15 May</p>
-            <p>on my birthday</p>
+            <p>We have English <strong>on Monday</strong>.</p>
+            <p>My birthday is <strong>on 15 May</strong>.</p>
+            <p>We celebrate New Year <strong>on 1 January</strong>.</p>
 
           </div>
 
@@ -76,9 +76,9 @@ export default function Learn01() {
 
             <h3>Long Periods</h3>
 
-            <p>in July</p>
-            <p>in 2026</p>
-            <p>in winter</p>
+            <p>We travel <strong>in July</strong>.</p>
+            <p>I was born <strong>in 1995</strong>.</p>
+            <p>It often snows <strong>in winter</strong>.</p>
 
           </div>
 
@@ -89,14 +89,14 @@ export default function Learn01() {
           <h2>Natalia</h2>
 
           <p>
-            Let's see how these rules work in real life.
+            Great! Now let's check what you've learned.
           </p>
 
           <PrimaryButton
-  onClick={() => navigate("/project01/examples")}
->
-  Examples →
-</PrimaryButton>
+            onClick={() => navigate("/project01/practice")}
+          >
+            Start Quiz →
+          </PrimaryButton>
 
         </div>
 

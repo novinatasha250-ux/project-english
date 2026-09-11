@@ -9,7 +9,7 @@ export default function UpcomingCard() {
       </div>
 
       <h3>
-        Modal Verbs
+        Place
       </h3>
 
       <p className="projectInfo">
