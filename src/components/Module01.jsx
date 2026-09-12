@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 import "../styles/module.css";
 import PrimaryButton from "./ui/PrimaryButton";
+import { BookOpen, NotebookPen } from "lucide-react";
 
 export default function Module01() {
   const navigate = useNavigate();
@@ -32,9 +33,20 @@ export default function Module01() {
 
       <div className="resourceCard">
 
-        <div>
-          <h2>📚 Lesson</h2>
-          <p>Grammar • Examples • Quiz</p>
+        <div className="resourceHeading">
+
+          <div className="resourceIconCircle">
+            <BookOpen
+          
+              className="resourceIcon"
+            />
+          </div>
+
+          <div>
+            <h2>Lesson</h2>
+            <p>Grammar • Examples • Quiz</p>
+          </div>
+
         </div>
 
         <PrimaryButton
@@ -49,9 +61,21 @@ export default function Module01() {
 
       <div className="resourceCard">
 
-        <div>
-          <h2>📝 Homework</h2>
-          <p>Extra practice</p>
+        <div className="resourceHeading">
+
+          <div className="resourceIconCircle">
+            <NotebookPen
+          
+              strokeWidth={2.2}
+              className="resourceIcon"
+            />
+          </div>
+
+          <div>
+            <h2>Homework</h2>
+            <p>Extra practice</p>
+          </div>
+
         </div>
 
         <PrimaryButton

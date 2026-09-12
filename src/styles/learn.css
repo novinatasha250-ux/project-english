@@ -9,7 +9,32 @@
     color: #6f6486;
     margin-bottom: 28px;
 }
+.lessonHeader{
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    gap:10px;
+    margin:10px 0 24px;
+}
 
+.grammarNatalia{
+    width:300px;
+    height:auto;
+    flex-shrink:0;
+}
+
+.lessonHeaderText{
+     align-items:flex-start;
+     padding-top:65px;
+}
+
+.lessonHeaderText .lessonTitle{
+    margin:0;
+}
+
+.lessonHeaderText .lessonSubtitle{
+    margin:10px 0 0;
+}
 .projectLabel {
     color: #7d68f2;
     font-weight: 700;
@@ -21,6 +46,7 @@
     display: flex;
     justify-content: center;
     gap: 10px;
+    margin-top: -10px;
     margin-bottom: 42px;
 }
 
@@ -34,79 +60,231 @@
 .lessonProgress .activeDot {
     background: #7d68f2;
 }
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
 
-.grammarCards {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    width: 100%;
-    max-width: 620px;
-    margin: auto;
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.grammarCard {
-    background: white;
-    border-radius: 24px;
-    padding: 22px 28px;
-    box-shadow: 0 14px 40px rgba(0,0,0,.08);
+.card {
+  animation: fadeUp .55s ease;
+}
+.grammarCards{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:22px;
+
+    width:100%;
+    max-width:680px;
+
+    margin:auto;
 }
 
-.grammarCard h2 {
-    font-size: 2rem;
-    margin: 8px 0;
+.grammarCard{
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:32px 36px;
+
+    box-shadow:0 14px 40px rgba(0,0,0,.08);
 }
 
-.grammarCard h3 {
-    color: #665b81;
-    margin-bottom: 20px;
-}
-
-.grammarCard p {
-    margin: 10px 0;
-    font-size: 1.15rem;
-}
-
-.grammarIcon {
-    font-size: 2rem;
-}
-
-.nextLessonCard {
-    margin: 50px auto 20px;
-    max-width: 620px;
-
-    background: white;
-    border-radius: 24px;
-
-    padding: 36px;
-
-    box-shadow: 0 14px 40px rgba(0,0,0,.08);
-
-    text-align: center;
-}
-
-.backButton {
-    background: none;
-    border: none;
-
-    font-size: 1rem;
-
-    color: #6f6486;
-
-    cursor: pointer;
-
-    margin-bottom: 20px;
-}
-
-.backButton:hover {
-    color: #7d68f2;
-}
 .cardHeading{
     display:flex;
-    justify-content:center;
+    flex-direction:column;
     align-items:center;
-    gap:12px;
+    gap:14px;
+    margin-bottom:24px;
+}
 
-    margin-bottom:12px;
+.grammarIconCircle{
+    width:72px;
+    height:72px;
+
+    border-radius:50%;
+
+    background:#F3EEFF;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.grammarIcon{
+    color:#7C6CF3;
+}
+.grammarIconCircle{
+    transition:transform .25s ease;
+}
+
+.grammarCard:hover .grammarIconCircle{
+    transform:scale(1.08);
+}
+.cardHeading h2{
+    margin:0;
+    font-size:2.6rem;
+    font-weight:800;
+}
+
+.cardHeading h3{
+    margin:0;
+    color:#665B81;
+    font-size:1.55rem;
+}
+
+.grammarCard p{
+
+    margin:10px 0;
+
+    font-size:1.15rem;
+
+    line-height:1.5;
+}
+.grammarCard{
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.grammarCard:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 50px rgba(0,0,0,.12);
+}
+/* =====================================
+   EXAMPLES CARD
+===================================== */
+
+.nextLessonCard{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:24px;
+
+    max-width:760px;
+    margin:56px auto 0;
+
+    padding:40px 48px;
+
+    background:#fff;
+    border-radius:28px;
+
+    box-shadow:0 14px 40px rgba(0,0,0,.08);
+
+    animation:fadeUp .7s ease .35s both;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.nextLessonCard:hover{
+    transform:translateY(-4px);
+    box-shadow:0 20px 48px rgba(0,0,0,.10);
+}
+
+
+/* =====================================
+   NATALIA
+===================================== */
+
+.nextNatalia{
+    width:190px;
+    flex-shrink:0;
+     transition:.35s;
+}
+
+.nextLessonCard:hover .nextNatalia{
+    transform:translateX(6px);
+    filter:drop-shadow(0 0 12px rgba(255,193,7,.45));
+}
+
+
+/* =====================================
+   CONTENT
+===================================== */
+
+.nextContent{
+    width:340px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    gap:22px;
+}
+
+.nextContent h2{
+    margin:0;
+
+    font-size:2rem;
+    font-weight:800;
+    line-height:1.15;
+
+    text-align:center;
+}
+
+
+/* =====================================
+   BUTTON
+===================================== */
+
+.nextContent button{
+
+    margin-left:-35px;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.nextContent button:hover{
+
+    transform:scale(1.06);
+
+    box-shadow:0 10px 24px rgba(125,104,242,.28);
+}
+
+
+/* =====================================
+   CARD HOVER
+===================================== */
+
+.nextLessonCard:hover .nextNatalia{
+
+    transform:translateX(4px);
+
+    transition:transform .35s ease;
+}
+
+
+/* =====================================
+   ANIMATIONS
+===================================== */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(22px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
 }
 .quizOptions{
     display:flex;
@@ -753,4 +931,101 @@
     margin:35px 0;
     font-style:italic;
     color:#7a6bb7;
+}
+.resourceTitle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.resourceIcon {
+    color: #7C6CF3;
+}
+.resourceHeading{
+    display:flex;
+    align-items:center;
+    gap:24px;
+}
+
+.resourceIconCircle{
+
+    width:92px;
+    height:92px;
+
+    border-radius:50%;
+
+    background:#F3EEFF;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    flex-shrink:0;
+}
+
+.resourceIcon{
+    width: 46px;
+    height: 46px;
+color:#7C6CF3;
+}
+
+.resourceHeading h2{
+
+    margin:0;
+}
+
+.resourceHeading p{
+
+    margin-top:8px;
+}
+.exampleList{
+    display:flex;
+    flex-direction:column;
+
+    gap:16px;
+
+    width:100%;
+    max-width:500px;
+
+    margin:0 auto;
+}
+
+.exampleItem{
+    display:flex;
+    align-items:flex-start;
+
+    gap:14px;
+
+    text-align:left;
+
+    font-size:1.12rem;
+    line-height:1.55;
+}
+
+.exampleBadge{
+    width:24px;
+    height:24px;
+
+    border-radius:50%;
+
+    background:#7D68F2;
+
+    color:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:.9rem;
+    font-weight:700;
+
+    flex-shrink:0;
+
+    margin-top:2px;
+
+    box-shadow:0 4px 10px rgba(125,104,242,.22);
+}
+
+.exampleItem strong{
+    color:#403A55;
 }

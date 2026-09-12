@@ -1,0 +1,48 @@
+.sectionHeader{
+
+    display:flex;
+    align-items:center;
+    gap:16px;
+
+    margin-bottom:32px;
+
+}
+
+.sectionHeaderIcon{
+
+    width:48px;
+    height:48px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:14px;
+
+    background:#F4F1FF;
+
+    color:#7D6AF2;
+
+    flex-shrink:0;
+
+}
+
+.sectionHeader h2{
+
+    margin:0;
+
+    font-size:1.8rem;
+
+    font-weight:700;
+
+    color:#24233A;
+
+}
+
+.sectionHeader p{
+
+    margin-top:4px;
+
+    color:#7A7890;
+
+}

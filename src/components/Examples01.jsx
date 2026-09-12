@@ -3,11 +3,20 @@ import { useNavigate } from "react-router-dom";
 import PrimaryButton from "./ui/PrimaryButton";
 import "../styles/learn.css";
 
+import {
+  Clock3,
+  CalendarDays,
+  Calendar
+} from "lucide-react";
+
 export default function Examples01() {
+
   const navigate = useNavigate();
 
   return (
+
     <div className="app">
+
       <div className="card">
 
         <button
@@ -37,48 +46,126 @@ export default function Examples01() {
 
         <div className="grammarCards">
 
+          {/* AT */}
+
           <div className="grammarCard">
 
             <div className="cardHeading">
-              <div className="grammarIcon">🕒</div>
+
+              <div className="grammarIconCircle">
+                <Clock3
+                  size={34}
+                  strokeWidth={2.2}
+                  className="grammarIcon"
+                />
+              </div>
+
               <h2>AT</h2>
+
+              <h3>Exact Times</h3>
+
             </div>
 
-            <h3>Exact Times</h3>
+            <div className="exampleList">
 
-            <p>We start work <strong>at 8:00</strong>.</p>
-            <p>We have lunch <strong>at noon</strong>.</p>
-            <p>I usually go to bed <strong>at midnight</strong>.</p>
+              <div className="exampleItem">
+                <span className="exampleBadge">✓</span>
+                <span>We start work <strong>at 8:00</strong>.</span>
+              </div>
+
+              <div className="exampleItem">
+                <span className="exampleBadge">✓</span>
+                <span>We have lunch <strong>at noon</strong>.</span>
+              </div>
+
+              <div className="exampleItem">
+                <span className="exampleBadge">✓</span>
+                <span>I usually go to bed <strong>at midnight</strong>.</span>
+              </div>
+
+            </div>
 
           </div>
+
+          {/* ON */}
 
           <div className="grammarCard">
 
             <div className="cardHeading">
-              <div className="grammarIcon">📅</div>
+
+              <div className="grammarIconCircle">
+                <CalendarDays
+                  size={34}
+                  strokeWidth={2.2}
+                  className="grammarIcon"
+                />
+              </div>
+
               <h2>ON</h2>
+
+              <h3>Days & Dates</h3>
+
             </div>
 
-            <h3>Days & Dates</h3>
+            <div className="exampleList">
 
-            <p>We have English <strong>on Monday</strong>.</p>
-            <p>My birthday is <strong>on 15 May</strong>.</p>
-            <p>We celebrate New Year <strong>on 1 January</strong>.</p>
+              <div className="exampleItem">
+                <span className="exampleBadge">✓</span>
+                <span>We have English <strong>on Monday</strong>.</span>
+              </div>
+
+              <div className="exampleItem">
+                <span className="exampleBadge">✓</span>
+                <span>My birthday is <strong>on 15 May</strong>.</span>
+              </div>
+
+              <div className="exampleItem">
+                <span className="exampleBadge">✓</span>
+                <span>We celebrate New Year <strong>on 1 January</strong>.</span>
+              </div>
+
+            </div>
 
           </div>
+
+          {/* IN */}
 
           <div className="grammarCard">
 
             <div className="cardHeading">
-              <div className="grammarIcon">🗓️</div>
+
+              <div className="grammarIconCircle">
+                <Calendar
+                  size={34}
+                  strokeWidth={2.2}
+                  className="grammarIcon"
+                />
+              </div>
+
               <h2>IN</h2>
+
+              <h3>Long Periods</h3>
+
             </div>
 
-            <h3>Long Periods</h3>
+            <div className="exampleList">
 
-            <p>We travel <strong>in July</strong>.</p>
-            <p>I was born <strong>in 1995</strong>.</p>
-            <p>It often snows <strong>in winter</strong>.</p>
+              <div className="exampleItem">
+                <span className="exampleBadge">✓</span>
+                <span>We travel <strong>in July</strong>.</span>
+              </div>
+
+              <div className="exampleItem">
+                <span className="exampleBadge">✓</span>
+                <span>I was born <strong>in 1995</strong>.</span>
+              </div>
+
+              <div className="exampleItem">
+                <span className="exampleBadge">✓</span>
+                <span>It often snows <strong>in winter</strong>.</span>
+              </div>
+
+            </div>
 
           </div>
 
@@ -86,21 +173,32 @@ export default function Examples01() {
 
         <div className="nextLessonCard">
 
-          <h2>Natalia</h2>
+          <img
+            src="/natalia-examples.png"
+            alt="Natalia"
+            className="nextNatalia"
+          />
 
-          <p>
-            Great! Now let's check what you've learned.
-          </p>
+          <div className="nextContent">
 
-          <PrimaryButton
-            onClick={() => navigate("/project01/practice")}
-          >
-            Start Quiz →
-          </PrimaryButton>
+            <h2>
+              Ready for a quiz?
+            </h2>
+
+            <PrimaryButton
+              onClick={() => navigate("/project01/practice")}
+            >
+              Start Quiz →
+            </PrimaryButton>
+
+          </div>
 
         </div>
 
       </div>
+
     </div>
+
   );
+
 }

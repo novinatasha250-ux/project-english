@@ -3,6 +3,12 @@ import { useNavigate } from "react-router-dom";
 import PrimaryButton from "./ui/PrimaryButton";
 import "../styles/learn.css";
 
+import {
+  Clock3,
+  CalendarDays,
+  Calendar
+} from "lucide-react";
+
 export default function Learn01() {
   const navigate = useNavigate();
 
@@ -21,13 +27,27 @@ export default function Learn01() {
           Project 01
         </p>
 
-        <h1 className="lessonTitle">
-          Grammar
-        </h1>
+        <div className="lessonHeader">
 
-        <p className="lessonSubtitle">
-          Time 
-        </p>
+          <img
+            src="/natalia-grammar.png"
+            alt="Natalia"
+            className="grammarNatalia"
+          />
+
+          <div className="lessonHeaderText">
+
+            <h1 className="lessonTitle">
+              Time
+            </h1>
+
+            <p className="lessonSubtitle">
+              AT • ON • IN
+            </p>
+
+          </div>
+
+        </div>
 
         <div className="lessonProgress">
           <span className="activeDot"></span>
@@ -37,14 +57,24 @@ export default function Learn01() {
 
         <div className="grammarCards">
 
+          {/* AT */}
           <div className="grammarCard">
 
             <div className="cardHeading">
-              <div className="grammarIcon">🕒</div>
-              <h2>AT</h2>
-            </div>
 
-            <h3>Exact Times</h3>
+              <div className="grammarIconCircle">
+                <Clock3
+                  size={34}
+                  strokeWidth={2.2}
+                  className="grammarIcon"
+                />
+              </div>
+
+              <h2>AT</h2>
+
+              <h3>Exact Times</h3>
+
+            </div>
 
             <p>at 7:00</p>
             <p>at noon</p>
@@ -52,14 +82,24 @@ export default function Learn01() {
 
           </div>
 
+          {/* ON */}
           <div className="grammarCard">
 
             <div className="cardHeading">
-              <div className="grammarIcon">📅</div>
-              <h2>ON</h2>
-            </div>
 
-            <h3>Days & Dates</h3>
+              <div className="grammarIconCircle">
+                <CalendarDays
+                  size={34}
+                  strokeWidth={2.2}
+                  className="grammarIcon"
+                />
+              </div>
+
+              <h2>ON</h2>
+
+              <h3>Days & Dates</h3>
+
+            </div>
 
             <p>on Monday</p>
             <p>on 15 May</p>
@@ -67,14 +107,24 @@ export default function Learn01() {
 
           </div>
 
+          {/* IN */}
           <div className="grammarCard">
 
             <div className="cardHeading">
-              <div className="grammarIcon">🗓️</div>
-              <h2>IN</h2>
-            </div>
 
-            <h3>Long Periods</h3>
+              <div className="grammarIconCircle">
+                <Calendar
+                  size={34}
+                  strokeWidth={2.2}
+                  className="grammarIcon"
+                />
+              </div>
+
+              <h2>IN</h2>
+
+              <h3>Long Periods</h3>
+
+            </div>
 
             <p>in July</p>
             <p>in 2026</p>
@@ -84,21 +134,27 @@ export default function Learn01() {
 
         </div>
 
-        <div className="nextLessonCard">
+       <div className="nextLessonCard">
 
-          <h2>Natalia</h2>
+  <img
+    src="/natalia-examples.png"
+    alt="Natalia"
+    className="nextNatalia"
+  />
 
-          <p>
-            Let's see how these rules work in real life.
-          </p>
+  <div className="nextContent">
 
-          <PrimaryButton
-  onClick={() => navigate("/project01/examples")}
->
-  Examples →
-</PrimaryButton>
+    <h2>Let's look at examples!</h2>
 
-        </div>
+    <PrimaryButton
+      onClick={() => navigate("/project01/examples")}
+    >
+      Examples →
+    </PrimaryButton>
+
+  </div>
+
+</div>
 
       </div>
     </div>
