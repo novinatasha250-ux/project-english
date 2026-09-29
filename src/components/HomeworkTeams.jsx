@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import PrimaryButton from "./ui/PrimaryButton";
+import FeedbackCard from "./ui/FeedbackCard";
 import "../styles/learn.css";
 
 const messages = [
@@ -48,6 +49,7 @@ const messages = [
 ];
 
 export default function HomeworkTeams() {
+
   const navigate = useNavigate();
 
   const [current, setCurrent] = useState(0);
@@ -56,12 +58,16 @@ export default function HomeworkTeams() {
 
   const message = messages[current];
 
+  const isCorrect =
+    answer.trim().toLowerCase() === message.answer;
+
   function checkAnswer() {
     if (!answer.trim()) return;
     setChecked(true);
   }
 
   function nextMessage() {
+
     if (current === messages.length - 1) {
       navigate("/project01/homework/email");
       return;
@@ -70,10 +76,13 @@ export default function HomeworkTeams() {
     setCurrent(current + 1);
     setAnswer("");
     setChecked(false);
+
   }
 
   return (
+
     <div className="app">
+
       <div className="card">
 
         <button
@@ -142,87 +151,69 @@ export default function HomeworkTeams() {
 
           </div>
 
-          <p
-            style={{
-              textAlign: "center",
-              marginBottom: "16px",
-            }}
-          >
-            Complete the message
-          </p>
+          {!checked ? (
 
-          <input
-            className="nameInput"
-            placeholder="Type the missing word..."
-            value={answer}
-            onChange={(e) => setAnswer(e.target.value)}
-          />
+            <>
 
-          <div
-            style={{
-              textAlign: "center",
-              marginTop: "30px",
-            }}
-          >
+              <p
+                style={{
+                  textAlign: "center",
+                  marginBottom: "16px",
+                }}
+              >
+                Complete the message
+              </p>
 
-            {!checked ? (
+              <input
+                className="nameInput"
+                placeholder="Type the missing word..."
+                value={answer}
+                onChange={(e) => setAnswer(e.target.value)}
+              />
 
-              <PrimaryButton onClick={checkAnswer}>
-                Check →
-              </PrimaryButton>
+              <div
+                style={{
+                  textAlign: "center",
+                  marginTop: "30px",
+                }}
+              >
 
-            ) : (
-
-              <>
-                <div
-                  className="nextLessonCard"
-                  style={{
-                    marginTop: "0",
-                    marginBottom: "30px",
-                  }}
-                >
-
-                  {answer.trim().toLowerCase() === message.answer ? (
-
-                    <>
-                      <h2>✅ Correct!</h2>
-                      <p>{message.explanation}</p>
-                    </>
-
-                  ) : (
-
-                    <>
-                      <h2>❌ Not quite</h2>
-
-                      <p>
-                        Correct answer:
-                        <strong> {message.answer.toUpperCase()}</strong>
-                      </p>
-
-                      <p>{message.explanation}</p>
-                    </>
-
-                  )}
-
-                </div>
-
-                <PrimaryButton onClick={nextMessage}>
-
-                  {current === messages.length - 1
-                    ? "Continue to Email →"
-                    : "Next Message →"}
-
+                <PrimaryButton onClick={checkAnswer}>
+                  Check →
                 </PrimaryButton>
 
-              </>
+              </div>
 
-            )}
+            </>
 
-          </div>
+          ) : (
+
+            <FeedbackCard
+              correct={isCorrect}
+              title={
+                isCorrect
+                  ? "Great job!"
+                  : "Almost there!"
+              }
+              explanation={message.explanation}
+              answer={message.answer.toUpperCase()}
+              score={isCorrect ? current + 1 : current}
+              total={messages.length}
+              nextLabel={
+                current === messages.length - 1
+                  ? "Continue to Email →"
+                  : "Next Message →"
+              }
+              onNext={nextMessage}
+            />
+
+          )}
 
         </div>
 
       </div>
+
     </div>
+
   );
 }

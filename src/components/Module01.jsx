@@ -79,7 +79,7 @@ export default function Module01() {
         </div>
 
         <PrimaryButton
-          onClick={() => navigate("/project01/homework/email")}
+          onClick={() => navigate("/project01/homework")}
         >
           Open
         </PrimaryButton>

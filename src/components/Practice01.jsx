@@ -24,7 +24,7 @@ const questions = [
     explanation: "We use IN with months, years and seasons.",
   },
   {
-    question: "The deadline is ___ 15 May.",
+    question: "The meeting is ___ 27 October.",
     options: ["at", "on", "in", "by"],
     answer: "on",
     explanation: "Specific dates use ON.",
@@ -107,28 +107,18 @@ export default function Practice01() {
         </div>
 
         <div className="grammarCard">
-
           <h2>{question.question}</h2>
 
           <div className="quizOptions">
-
             {question.options.map((option) => {
-
               let className = "quizOption";
 
-              if (!checked && selected === option)
-                className += " selected";
+              if (!checked && selected === option) className += " selected";
 
-              if (checked && option === question.answer)
-                className += " correct";
+              if (checked && option === question.answer) className += " correct";
 
-              if (
-                checked &&
-                option === selected &&
-                option !== question.answer
-              )
+              if (checked && option === selected && option !== question.answer)
                 className += " wrong";
-
               return (
                 <button
                   key={option}
@@ -138,61 +128,111 @@ export default function Practice01() {
                   {option}
                 </button>
               );
-
             })}
-
           </div>
-
         </div>
 
+        {/* =========================
+            FEEDBACK
+        ========================== */}
+
         {checked && (
+          <div className="quizFeedback">
 
-          <div className="nextLessonCard">
+            <div className="feedbackNataliaWrapper">
 
-            {selected === question.answer ? (
-              <>
-                <h2>✅ Correct!</h2>
-                <p>{question.explanation}</p>
-              </>
-            ) : (
-              <>
-                <h2>❌ Not quite</h2>
+              {selected === question.answer ? (
+                <img
+                  src="/confetti.png"
+                  alt=""
+                  className="confetti"
+                />
+              ) : (
+                <img
+                  src="/thinking-swirl.png"
+                  alt=""
+                  className="thinkingSwirl"
+                />
+              )}
 
-                <p>
+              <img
+                src={
+                  selected === question.answer
+                    ? "/natalia-correct.png"
+                    : "/natalia-wrong.png"
+                }
+                alt="Natalia"
+                className="feedbackNatalia"
+              />
+
+            </div>
+
+            <div className="feedbackCard">
+
+              <h2
+  key={`${current}-${selected}`}
+  className={
+    selected === question.answer
+      ? "correctTitle"
+      : "wrongTitle"
+  }
+>
+                {selected === question.answer
+                  ? "Great job!"
+                  : "Almost there!"}
+              </h2>
+
+              {selected !== question.answer && (
+                <p className="feedbackAnswer">
                   Correct answer:
-                  <strong> {question.answer.toUpperCase()}</strong>
+                  <span className="answerBadge">
+                    {question.answer.toUpperCase()}
+                  </span>
                 </p>
+              )}
 
-                <p>{question.explanation}</p>
-              </>
-            )}
+              <p className="feedbackText">
+                {question.explanation}
+              </p>
 
-            <p>
-              <strong>Score:</strong> {score} / {questions.length}
-            </p>
+              <div className="scorePill">
+                Score {score} / {questions.length}
+              </div>
+
+            </div>
 
           </div>
-
         )}
 
-        <div className="nextLessonCard">
+        {/* =========================
+            ACTION BUTTON
+        ========================== */}
+
+        <div className="quizActions">
 
           {!checked ? (
 
-            <PrimaryButton onClick={checkAnswer}>
-              Check Answer →
+            <PrimaryButton
+              onClick={checkAnswer}
+              disabled={!selected}
+            >
+              Check answer
             </PrimaryButton>
 
-          ) : current === questions.length - 1 ? (
+          ) : current < questions.length - 1 ? (
 
-            <PrimaryButton onClick={finishQuiz}>
-              Finish →
+            <PrimaryButton
+              onClick={nextQuestion}
+            >
+              Next Question
             </PrimaryButton>
 
           ) : (
 
-            <PrimaryButton onClick={nextQuestion}>
-              Next Question →
+            <PrimaryButton
+              onClick={finishQuiz}
+            >
+              Finish Quiz
             </PrimaryButton>
 
           )}

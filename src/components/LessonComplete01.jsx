@@ -4,6 +4,7 @@ import PrimaryButton from "./ui/PrimaryButton";
 import "../styles/learn.css";
 
 export default function LessonComplete01() {
+
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -12,15 +13,16 @@ export default function LessonComplete01() {
   let message = "Keep practising!";
 
   if (score === 5) {
-    message = "Excellent work!";
+    message = "Outstanding work!";
   } else if (score >= 4) {
-    message = "Great job!";
+    message = "Fantastic work!";
   } else if (score >= 3) {
     message = "Nice work!";
   }
 
   return (
     <div className="app">
+
       <div className="card">
 
         <p className="projectLabel">
@@ -32,7 +34,7 @@ export default function LessonComplete01() {
         </h1>
 
         <p className="lessonSubtitle">
-          Time 
+          Time
         </p>
 
         <div className="lessonProgress">
@@ -43,34 +45,63 @@ export default function LessonComplete01() {
 
         <div className="nextLessonCard">
 
-          <h2>🎉 {message}</h2>
+          <img
+            src="/natalia-homework.png"
+            alt="Natalia"
+            className="lessonCompleteNatalia"
+          />
 
-          <h1 className="scoreTitle">
-            {score} / 5
-          </h1>
+          <div className="lessonScore">
 
-          <p className="scoreText">
-            You have successfully completed today's lesson.
-          </p>
+            <div className="lessonStars">
+              {"★".repeat(score)}
+              {"☆".repeat(5 - score)}
+            </div>
 
-          <div className="completionList">
-
-            <p>✅ Grammar</p>
-
-            <p>✅ Examples</p>
-
-            <p>✅ Practice</p>
+            <div className="lessonFraction">
+              {score} / 5
+            </div>
 
           </div>
 
-          <hr className="lessonDivider" />
+          <h2 className="completeTitle">
+            {message}
+          </h2>
 
-          <h3>Natalia</h3>
-
-          <p>
-            Fantastic work! Now let's complete the homework
-            and put everything into practice.
+          <p className="completeText">
+            You successfully completed today's lesson.
           </p>
+
+          <div className="completeChecklist">
+
+  <div className="checkItem">
+    <span className="checkIcon">✓</span>
+    <span>Grammar</span>
+  </div>
+
+  <div className="checkItem">
+    <span className="checkIcon">✓</span>
+    <span>Examples</span>
+  </div>
+
+  <div className="checkItem">
+    <span className="checkIcon">✓</span>
+    <span>Practice</span>
+  </div>
+
+</div>
+
+          <div className="homeworkMessage">
+
+            <h3>
+              Ready for one more step?
+            </h3>
+
+            <p>
+              Let's practice everything you learned with today's homework.
+            </p>
+
+          </div>
 
           <PrimaryButton
             onClick={() => navigate("/project01/homework")}
@@ -81,6 +112,7 @@ export default function LessonComplete01() {
         </div>
 
       </div>
+
     </div>
   );
 }

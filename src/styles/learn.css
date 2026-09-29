@@ -360,53 +360,267 @@
     color:white;
     border-color:#F56B6B;
 }
-.scoreTitle{
-    font-size:4rem;
-    margin:12px 0;
+/* =====================================
+   LESSON COMPLETE
+===================================== */
+
+.nextLessonCard{
+
+    max-width:720px;
+
+    margin:40px auto 0;
+
+    background:#FBFAFF;
+
+    border-radius:28px;
+
+    padding:42px;
+
+    box-shadow:0 14px 40px rgba(0,0,0,.08);
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    text-align:center;
 }
 
-.scoreText{
-    color:#665b81;
+/* ---------- Natalia ---------- */
+
+.lessonCompleteNatalia{
+
+    width:230px;
+     height:auto;
+
+    margin-bottom:20px;
+
+    animation:nataliaFloat 3s ease-in-out infinite;
+}
+
+/* ---------- Score ---------- */
+
+.lessonScore{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:6px;
+
+    background:#F2EEFF;
+
+    border-radius:24px;
+
+    padding:16px 28px;
+
     margin-bottom:28px;
 }
 
-.completionList{
-    margin:28px 0;
-    line-height:2;
-    font-size:1.1rem;
+.lessonStars{
+
+    font-size:1.5rem;
+
+    letter-spacing:2px;
+
+    color:#FFC93C;
 }
 
-.lessonDivider{
-    margin:30px 0;
-    border:none;
-    border-top:1px solid #e6e2f2;
+.lessonFraction{
+
+    font-size:1.15rem;
+
+    font-weight:700;
+
+    color:#665B81;
 }
+
+/* ---------- Text ---------- */
+
+.completeTitle{
+
+    margin:0 0 14px;
+
+    font-size:2.4rem;
+
+    font-weight:800;
+
+    color:#31B56A;
+}
+
+.completeText{
+
+    margin:0 0 32px;
+
+    max-width:430px;
+
+    color:#665B81;
+
+    line-height:1.6;
+
+    font-size:1.15rem;
+}
+
+/* =====================================
+   COMPLETION CHECKLIST
+===================================== */
+
+.completeChecklist{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    gap:18px;
+
+    margin:38px 0 44px;
+}
+
+.checkItem{
+
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    font-size:1.35rem;
+    font-weight:600;
+
+    color:#665B81;
+}
+
+.checkIcon{
+
+    width:28px;
+    height:28px;
+
+    border-radius:50%;
+
+    background:#8B6CF6;
+
+    color:#fff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:.95rem;
+    font-weight:700;
+
+    box-shadow:0 6px 16px rgba(139,108,246,.22);
+
+    flex-shrink:0;
+}
+
+/* ---------- Homework ---------- */
+
+.homeworkMessage{
+
+    max-width:520px;
+
+    margin:48px auto 34px;
+
+    text-align:center;
+}
+
+.homeworkMessage h3{
+
+    margin:0 0 14px;
+
+    color:#665B81;
+
+    font-size:2rem;
+
+    font-weight:800;
+}
+
+.homeworkMessage p{
+
+    margin:0;
+
+    color:#665B81;
+
+    line-height:1.7;
+
+    font-size:1.15rem;
+}
+/* ---------- Name ---------- */
+
+.nameSection{
+
+    margin-top:40px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+}
+
+.nameLabel{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:20px;
+
+    padding:12px 26px;
+
+    border-radius:999px;
+
+    background:#F2EEFF;
+
+    color:#665B81;
+
+    font-size:1.08rem;
+
+    font-weight:700;
+
+    text-align:center;
+
+    box-shadow:0 6px 18px rgba(125,104,242,.08);
+}
+
 .nameInput{
 
     width:100%;
 
-    max-width:380px;
+    max-width:400px;
 
-    margin-top:20px;
+    display:block;
 
-    padding:16px 20px;
+    padding:18px 22px;
 
-    border:2px solid #ddd;
+    border:2px solid #D9D3F7;
 
-    border-radius:16px;
+    border-radius:18px;
 
-    font-size:18px;
+    background:#FFFFFF;
+
+    color:#2D2A38;
+
+    font-size:1.1rem;
 
     outline:none;
 
-    transition:.2s;
+    transition:all .25s ease;
+}
+
+.nameInput::placeholder{
+
+    color:#A19ABF;
 }
 
 .nameInput:focus{
 
-    border-color:#7D6AF2;
+    border-color:#7D68F2;
 
+    box-shadow:0 0 0 5px rgba(125,104,242,.12);
 }
+
 /* ---------- Teams ---------- */
 
 .teamsCard{
@@ -579,7 +793,104 @@
 
 }
 
-/* Answer inputs */
+/* ---------- Writing area ---------- */
+
+.writingBox{
+
+    width:100%;
+
+    min-height:240px;
+
+    box-sizing:border-box;
+
+    margin:18px 0 28px;
+
+    padding:22px;
+
+    background:white;
+
+    border:2px solid #E3E2F3;
+
+    border-radius:18px;
+
+    outline:none;
+
+    resize:vertical;
+
+    font-family:inherit;
+
+    font-size:1.05rem;
+
+    line-height:1.8;
+
+    color:#56516F;
+
+    transition:.2s;
+
+}
+
+.writingBox::placeholder{
+
+    color:#A19DBD;
+
+}
+
+.writingBox:focus{
+
+    border-color:#7D6AF2;
+
+    box-shadow:0 0 0 4px rgba(125,106,242,.12);
+
+}
+.writingCard{
+
+    max-width:1000px;
+
+    margin:56px auto 0;
+
+    padding:48px 56px;
+
+    background:white;
+
+    border-radius:28px;
+
+    box-shadow:0 14px 40px rgba(0,0,0,.08);
+
+}
+.writingTask h3{
+    color:#6D5DF6;
+    font-size:1.55rem;
+    margin-bottom:18px;
+}
+
+.writingTask p,
+.writingTask li{
+    color:#56516F;
+    font-size:1.08rem;
+}.writingTask{
+
+    background:#FAF9FF;
+
+    border:2px solid #ECE8FF;
+
+    border-radius:20px;
+
+    padding:28px 34px;
+
+}
+
+/* ---------- Name field ---------- */
+
+.emailBody .answerInput{
+
+    width:100%;
+
+    margin-top:12px;
+
+}
+
+
+/* ---------- Inline gap inputs ---------- */
 
 .smallInput{
 
@@ -597,13 +908,18 @@
 
     font-size:1rem;
 
+    font-family:inherit;
+
+    color:#56516F;
+
     padding:4px;
 
     margin-right:8px;
 
 }
 
-/* Optional indentation */
+
+/* ---------- Optional indentation ---------- */
 
 .emailIndent{
 
@@ -727,7 +1043,10 @@
 
 .homeworkQuestion{
 
-    margin-bottom:48px;
+    width:100%;
+    max-width:640px;
+
+    margin:0 auto 42px;
 
     text-align:left;
 
@@ -735,57 +1054,51 @@
 
 .questionName{
 
-    display:inline-block;
+    display:inline-flex;
+
+    align-items:center;
 
     background:#F3F1FF;
-
     color:#7D6AF2;
 
-    padding:6px 14px;
+    padding:8px 18px;
 
     border-radius:999px;
 
     font-size:.95rem;
-
     font-weight:700;
 
-    margin-bottom:14px;
+    margin-bottom:18px;
 
 }
 
 .questionText{
 
-    font-size:1.12rem;
+    margin:0 0 16px;
 
-    line-height:1.7;
+    text-align:left;
+
+    font-size:1.15rem;
+    line-height:1.6;
 
     color:#56516F;
-
-    margin-bottom:18px;
 
 }
 
 .answerInput{
 
     width:100%;
-
     box-sizing:border-box;
 
-    padding:16px 18px;
+    padding:18px 20px;
 
     border:2px solid #E3E2F3;
+    border-radius:18px;
 
-    border-radius:16px;
+    background:#fff;
 
-    background:white;
-
-    font-size:1rem;
-
+    font-size:1.05rem;
     font-family:inherit;
-
-    color:#56516F;
-
-    transition:.2s;
 
 }
 
@@ -801,61 +1114,55 @@
 
     border-color:#7D6AF2;
 
-    box-shadow:0 0 0 4px rgba(125,106,242,.12);
+    box-shadow:0 0 0 5px rgba(125,106,242,.12);
 
 }
 
 .homeworkButton{
 
-    margin-top:8px;
+    margin-top:40px;
 
     text-align:center;
 
 }
-.feedbackBox{
-
-    margin-top:30px;
-
-    background:#F8F9FD;
-
-    border-radius:18px;
-
-    padding:22px;
-
-    border:1px solid #E8EAF4;
-
-    text-align:left;
-
-}
-
-.feedbackBox p{
-
-    margin:10px 0;
-
-    font-size:1.05rem;
-
-}
-.successBanner{
-
-    margin-top:24px;
-
-    padding:18px;
-
-    border-radius:16px;
-
-    background:#EAF8EE;
-
-    border:2px solid #6BCB77;
-
-    color:#2F7A41;
-
-    font-weight:700;
+.homeworkIntro{
 
     text-align:center;
 
-    font-size:1.05rem;
+    color:#6F6486;
+
+    margin-bottom:50px;
+
+    font-size:1.1rem;
 
 }
+.sectionTitle{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:14px;
+
+    margin-bottom:22px;
+
+}
+
+.sectionTitle{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    margin-bottom:18px;
+}
+
+.sectionIcon{
+    color:#7D6AF2;
+    flex-shrink:0;
+}
+
 .writingTask{
 
     margin:32px 0;
@@ -1028,4 +1335,646 @@ color:#7C6CF3;
 
 .exampleItem strong{
     color:#403A55;
+}
+/* =====================================
+   QUIZ FEEDBACK
+===================================== */
+
+.quizFeedback{
+
+    width:100%;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    margin:28px auto 0;
+}
+
+/* ---------- Natalia ---------- */
+
+.feedbackNataliaWrapper{
+
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+
+    width:210px;
+    height:122px;
+
+    margin-bottom:-10px;
+}
+
+.feedbackNatalia{
+
+    width:150px;
+
+    position:relative;
+
+    top:4px;
+
+    z-index:2;
+
+    animation:nataliaFloat 3s ease-in-out infinite;
+}
+
+/* ---------- Decorations ---------- */
+
+.confetti{
+
+    position:absolute;
+
+    width:225px;
+
+    left:50%;
+    top:0;
+
+    transform:translateX(-50%);
+
+    z-index:1;
+
+    pointer-events:none;
+
+    animation:confettiPop .7s ease;
+}
+
+.thinkingSwirl{
+
+    position:absolute;
+
+    width:34px;
+
+    top:4px;
+
+    left:50%;
+
+    transform:translateX(18px);
+
+    z-index:10;
+
+    pointer-events:none;
+
+    animation:swirlFloat 2s ease-in-out infinite;
+
+}
+
+/* ---------- Card ---------- */
+
+.feedbackCard{
+
+    width:100%;
+    max-width:640px;
+
+    background:#FBFAFF;
+
+    border-radius:28px;
+
+    padding:34px 42px 36px;
+
+    text-align:center;
+
+    box-shadow:0 14px 40px rgba(0,0,0,.08);
+}
+
+/* ---------- Typography ---------- */
+
+.correctTitle,
+.wrongTitle{
+
+    margin:0 0 18px;
+
+    font-size:2.4rem;
+    font-weight:800;
+}
+
+.correctTitle{
+
+    color:#31B56A;
+
+    animation:titleBounce .45s ease;
+}
+
+.wrongTitle{
+
+    color:#EB5A5A;
+
+    animation:titleShake .45s ease;
+}
+
+.feedbackAnswer{
+
+    margin:0 0 14px;
+
+    color:#665B81;
+
+    font-size:1.1rem;
+}
+
+.answerBadge{
+
+    display:inline-block;
+
+    margin-left:8px;
+
+    padding:4px 12px;
+
+    border-radius:999px;
+
+    background:#F2EEFF;
+
+    color:#7D68F2;
+
+    font-weight:700;
+}
+
+.feedbackText{
+
+    margin:0;
+
+    color:#665B81;
+
+    font-size:1.15rem;
+
+    line-height:1.55;
+}
+
+.scorePill{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    margin-top:24px;
+
+    padding:10px 20px;
+
+    min-width:145px;
+
+    border-radius:999px;
+
+    background:#F2EEFF;
+
+    color:#665B81;
+
+    font-size:1.05rem;
+    font-weight:700;
+
+    white-space:nowrap;
+
+    animation:scorePop .45s ease;
+}
+@keyframes scorePop {
+  0% {
+    transform: scale(.8);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ---------- Button ---------- */
+
+.quizActions{
+
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin-top:56px;
+    margin-bottom:8px;
+}
+
+/* =====================================
+   ANIMATIONS
+===================================== */
+
+@keyframes nataliaFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-5px);
+    }
+
+}
+
+@keyframes confettiPop{
+
+    0%{
+        opacity:0;
+        transform:translateX(-50%) scale(.6);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateX(-50%) scale(1);
+    }
+
+}
+
+@keyframes swirlFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-5px) rotate(8deg);
+    }
+
+}
+
+@keyframes titleBounce{
+
+    0%{
+        transform:scale(.85);
+    }
+
+    60%{
+        transform:scale(1.08);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+@keyframes titleShake{
+
+    0%{
+        transform:translateX(0);
+    }
+
+    20%{
+        transform:translateX(-4px);
+    }
+
+    40%{
+        transform:translateX(4px);
+    }
+
+    60%{
+        transform:translateX(-3px);
+    }
+
+    80%{
+        transform:translateX(3px);
+    }
+
+    100%{
+        transform:translateX(0);
+    }
+
+}
+
+@keyframes scorePop{
+
+    0%{
+        transform:scale(.8);
+    }
+
+    60%{
+        transform:scale(1.08);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+/* ---------- Feedback Card ---------- */
+
+.feedbackCard{
+
+    max-width:760px;
+
+    width:100%;
+
+    margin:24px auto 0;
+
+    padding:28px 34px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:30px;
+
+    background:#F8F7FF;
+
+    border-radius:24px;
+
+    box-shadow:0 16px 35px rgba(60,50,100,.08);
+
+}
+
+.feedbackLeft{
+
+    flex:0 0 90px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.feedbackNatalia{
+
+    width:92px;
+
+    display:block;
+
+}
+
+.feedbackRight{
+
+    flex:1;
+
+    min-width:0;
+
+    text-align:left;
+
+}
+
+.feedbackSuccess{
+
+    margin:0 0 14px;
+
+    color:#2FB463;
+
+    font-size:2rem;
+
+    font-weight:800;
+
+    line-height:1.1;
+
+}
+
+.feedbackAlmost{
+
+    margin:0 0 14px;
+
+    color:#665B81;
+
+    font-size:2rem;
+
+    font-weight:800;
+
+    line-height:1.1;
+
+}
+.feedbackAnswerInline{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin:0 0 18px;
+
+    color:#665B81;
+
+    font-size:1.08rem;
+
+    font-weight:600;
+
+}
+
+.feedbackAnswerInline strong{
+
+    font-weight:700;
+
+}
+
+.feedbackAnswerInline .feedbackBadge{
+
+    margin:0;
+
+}
+
+/* ---------- Correct answer ---------- */
+
+.feedbackAnswer{
+
+    margin:0 0 16px;
+
+}
+
+.feedbackAnswerTitle{
+
+    margin:0 0 10px;
+
+    color:#665B81;
+
+    font-weight:700;
+
+    font-size:1.05rem;
+
+}
+
+.feedbackBadges{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+}
+
+.feedbackAnswerList{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.feedbackAnswerItem{
+
+    margin:0;
+
+    font-size:1.08rem;
+
+    line-height:1.7;
+
+    color:#5C5878;
+
+}
+
+.feedbackAnswerItem strong{
+
+    color:#7D6AF2;
+
+    font-weight:700;
+
+}
+
+/* ---------- Explanation ---------- */
+
+.feedbackExplanation{
+
+    margin:18px 0 24px;
+
+    max-width:440px;
+
+    color:#665B81;
+
+    font-size:1.12rem;
+
+    line-height:1.7;
+
+}
+
+/* ---------- Button ---------- */
+
+.feedbackRight .primaryButton{
+
+    width:220px;
+
+}
+/* =====================================
+   COMPLETION PAGE
+===================================== */
+
+.completionCard{
+
+    max-width:760px;
+
+    margin:40px auto;
+
+    text-align:center;
+
+    padding:60px;
+
+}
+
+.completionNatalia{
+
+    width:170px;
+
+    margin-bottom:30px;
+
+    animation:celebrateBounce 1s ease;
+
+}
+
+@keyframes celebrateBounce{
+
+    0%{
+        transform:translateY(20px) scale(.8);
+        opacity:0;
+    }
+
+    35%{
+        transform:translateY(-18px) scale(1.08);
+        opacity:1;
+    }
+
+    55%{
+        transform:translateY(0) scale(.98);
+    }
+
+    75%{
+        transform:translateY(-8px) scale(1.02);
+    }
+
+    100%{
+        transform:translateY(0) scale(1);
+    }
+
+}
+
+.completionSubtitle{
+
+    margin:22px 0 36px;
+
+    font-size:1.25rem;
+
+    color:#56516F;
+
+}
+
+.completionChecklist{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    width:fit-content;
+
+    margin:0 auto 40px;
+
+}
+
+.completionItem{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    font-size:1.12rem;
+
+    color:#56516F;
+
+}
+
+.completionCheck{
+
+    color:#55B878;
+
+}
+
+.completionMessage{
+
+    max-width:560px;
+
+    margin:0 auto 34px;
+
+    font-size:1.08rem;
+
+    line-height:1.8;
+
+    color:#56516F;
+
+}
+
+.completionSignature{
+
+    margin-bottom:42px;
+
+    color:#6D5DF6;
+
+    line-height:1.8;
+
+    font-size:1.15rem;
+
+}
+
+.completionSignature span{
+
+    font-style:italic;
+
 }

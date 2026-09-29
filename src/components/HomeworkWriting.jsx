@@ -1,18 +1,29 @@
 import PrimaryButton from "./ui/PrimaryButton";
+import { SquarePen } from "lucide-react";
 
 export default function HomeworkWriting({
   writing,
   setWriting,
   studentName,
   setStudentName,
-  onSubmit
+  onSubmit,
 }) {
 
   return (
 
-    <div className="nextLessonCard">
+    <div className="writingCard">
 
-      <h2>✍️ Final Writing Task</h2>
+      <div className="sectionTitle">
+
+        <SquarePen
+          size={36}
+          strokeWidth={2.2}
+          className="sectionIcon"
+        />
+
+        <h2>Final Writing Task</h2>
+
+      </div>
 
       <p className="homeworkIntro">
         Read the email and write a reply.
@@ -22,9 +33,13 @@ export default function HomeworkWriting({
 
         <div className="emailHeader">
 
-          <p><strong>From:</strong> Anna</p>
+          <p>
+            <strong>From:</strong> Anna
+          </p>
 
-          <p><strong>Subject:</strong> Meeting</p>
+          <p>
+            <strong>Subject:</strong> Meeting
+          </p>
 
         </div>
 
@@ -51,9 +66,7 @@ export default function HomeworkWriting({
 
         <h3>Your task</h3>
 
-        <p>
-          Reply to Anna.
-        </p>
+        <p>Reply to Anna.</p>
 
         <ul>
 
@@ -75,9 +88,13 @@ export default function HomeworkWriting({
 
         <div className="emailHeader">
 
-          <p><strong>To:</strong> Anna</p>
+          <p>
+            <strong>To:</strong> Anna
+          </p>
 
-          <p><strong>Subject:</strong> Re: Meeting</p>
+          <p>
+            <strong>Subject:</strong> Re: Meeting
+          </p>
 
         </div>
 
@@ -86,21 +103,21 @@ export default function HomeworkWriting({
           <p>Hi Anna,</p>
 
           <textarea
-  className="writingBox"
-  rows="8"
-  value={writing}
-  onChange={(e) => setWriting(e.target.value)}
-  placeholder="Write your email here..."
-/>
+            className="writingBox"
+            rows={8}
+            value={writing}
+            onChange={(e) => setWriting(e.target.value)}
+            placeholder="Write your email here..."
+          />
 
-<p>Best,</p>
+          <p>Best,</p>
 
-<input
-  className="answerInput"
-  value={studentName}
-  onChange={(e) => setStudentName(e.target.value)}
-  placeholder="Your name"
-/>
+          <input
+            className="answerInput"
+            value={studentName}
+            onChange={(e) => setStudentName(e.target.value)}
+            placeholder="Your name"
+          />
 
         </div>
 
@@ -109,9 +126,7 @@ export default function HomeworkWriting({
       <div className="homeworkButton">
 
         <PrimaryButton onClick={onSubmit}>
-
           Submit
-
         </PrimaryButton>
 
       </div>

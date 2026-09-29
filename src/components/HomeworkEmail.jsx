@@ -2,10 +2,10 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import PrimaryButton from "./ui/PrimaryButton";
+import FeedbackCard from "./ui/FeedbackCard";
 import "../styles/learn.css";
 
 export default function HomeworkEmail() {
-
   const navigate = useNavigate();
 
   const [day, setDay] = useState("");
@@ -23,7 +23,6 @@ export default function HomeworkEmail() {
 
   return (
     <div className="app">
-
       <div className="card">
 
         <button
@@ -88,29 +87,23 @@ export default function HomeworkEmail() {
             <div className="emailIndent">
 
               <p>
-
                 <input
                   className="smallInput"
                   value={day}
                   onChange={(e) => setDay(e.target.value)}
                   placeholder="..."
                 />
-
                 Monday
-
               </p>
 
               <p>
-
                 <input
                   className="smallInput"
                   value={time}
                   onChange={(e) => setTime(e.target.value)}
                   placeholder="..."
                 />
-
                 9:00.
-
               </p>
 
             </div>
@@ -146,64 +139,22 @@ export default function HomeworkEmail() {
 
           ) : (
 
-            <>
-
-              <div
-                className="nextLessonCard"
-                style={{
-                  marginTop: "0",
-                  marginBottom: "30px",
-                }}
-              >
-
-                {correct ? (
-
-                  <>
-
-                    <h2>✅ Correct!</h2>
-
-                    <p>
-                      Great! We use <strong>ON</strong> with days and <strong>AT</strong> with exact times.
-                    </p>
-
-                  </>
-
-                ) : (
-
-                  <>
-
-                    <h2>❌ Not quite</h2>
-
-                    <p>
-                      Correct answers:
-                    </p>
-
-                    <p>
-                      <strong>ON Monday</strong>
-                      <br />
-                      <strong>AT 9:00</strong>
-                    </p>
-
-                  </>
-
-                )}
-
-              </div>
-
-              <PrimaryButton
-                onClick={() => navigate("/project01/homework/calendar")}
-              >
-                Continue →
-              </PrimaryButton>
-
-            </>
+            <FeedbackCard
+              correct={correct}
+              title={correct ? "Great job!" : "Almost there!"}
+              explanation="We use ON with days and AT with exact times."
+              answer="ON Monday, AT 9:00"
+              nextLabel="Continue →"
+              onNext={() =>
+                navigate("/project01/homework/calendar")
+              }
+            />
 
           )}
 
         </div>
 
       </div>
-
     </div>
   );
 }

@@ -10,6 +10,7 @@ export default function Homework01() {
   const [name, setName] = useState("");
 
   return (
+
     <div className="app">
 
       <div className="card">
@@ -42,63 +43,105 @@ export default function Homework01() {
 
         <div className="nextLessonCard">
 
-          <h2>📝 Project Brief</h2>
+          {/* ---------- Goal ---------- */}
 
-          <p>
-            Today's goal is to use
-            <strong> AT</strong>,
-            <strong> ON</strong> and
-            <strong> IN</strong> correctly
-            when talking about time at work.
-          </p>
+          <div className="homeworkHero">
 
-          <hr className="lessonDivider" />
+            <img
+              src="/natalia-homework-desk.png"
+              alt="Natalia"
+              className="lessonCompleteNatalia"
+            />
 
-          <h3>Today's Homework</h3>
+            <div className="goalCard">
 
-          <p>
-            📖 Grammar Review
-            <br />
-            💬 Teams Messages
-            <br />
-            📧 Email
-            <br />
-            📅 Calendar
-            <br />
-            ✍️ Writing Task
-          </p>
+              <h2 className="goalTitle">
+                Today's Goal
+              </h2>
 
-          <p style={{ marginTop: "30px" }}>
-            ⏱ <strong>Estimated time:</strong> 10–15 minutes
-          </p>
+              <p className="goalText">
+                Use <strong>AT</strong>, <strong>ON</strong> and <strong>IN</strong> correctly when talking about time at work.
+              </p>
 
-          <hr className="lessonDivider" />
-
-          <p>
-            Before you begin, please enter your name.
-          </p>
-
-          <input
-            className="nameInput"
-            placeholder="Your name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-
-          <div style={{ marginTop: "32px" }}>
-
-            <PrimaryButton
-              onClick={() => navigate("/project01/homework/teams")}
-            >
-              Begin Homework →
-            </PrimaryButton>
+            </div>
 
           </div>
+
+          {/* ---------- Homework ---------- */}
+
+          <div className="completeChecklist">
+
+            <div className="checkItem">
+              <span className="checkIcon">✓</span>
+              <span>Grammar Review</span>
+            </div>
+
+            <div className="checkItem">
+              <span className="checkIcon">✓</span>
+              <span>Teams Messages</span>
+            </div>
+
+            <div className="checkItem">
+              <span className="checkIcon">✓</span>
+              <span>Email</span>
+            </div>
+
+            <div className="checkItem">
+              <span className="checkIcon">✓</span>
+              <span>Calendar</span>
+            </div>
+
+            <div className="checkItem">
+              <span className="checkIcon">✓</span>
+              <span>Writing Task</span>
+            </div>
+
+          </div>
+
+          {/* ---------- Estimated time ---------- */}
+
+          <div className="estimatedTime">
+
+            <span className="timeLabel">
+              Estimated time
+            </span>
+
+            <span className="timeValue">
+              10–15 minutes
+            </span>
+
+          </div>
+
+          {/* ---------- Name ---------- */}
+
+          <div className="nameSection">
+
+            <div className="nameLabel">
+              Before you begin, please enter your name.
+            </div>
+
+            <input
+              className="nameInput"
+              placeholder="Enter your name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+
+          </div>
+
+          {/* ---------- Button ---------- */}
+
+          <PrimaryButton
+            onClick={() => navigate("/project01/homework/teams")}
+          >
+            Start Homework →
+          </PrimaryButton>
 
         </div>
 
       </div>
 
     </div>
+
   );
 }

@@ -1,4 +1,6 @@
 import PrimaryButton from "./ui/PrimaryButton";
+import FeedbackCard from "./ui/FeedbackCard";
+import { ClipboardList } from "lucide-react";
 
 export default function CalendarQuestions({
   answer1,
@@ -10,56 +12,68 @@ export default function CalendarQuestions({
   results,
   setResults,
   attempts,
-  setAttempts
+  setAttempts,
 }) {
 
-
-  const checkAnswers = () => {
+  function checkAnswers() {
 
     const a1 = answer1.toLowerCase().trim();
     const a2 = answer2.toLowerCase().trim();
     const a3 = answer3.toLowerCase().trim();
 
-    // Question 1
+    const q1 = a1.includes("wednesday");
 
-const q1 =
-  a1.includes("wednesday");
+    const q2 = a2.includes("monday");
 
-// Question 2
+    const hasFriday =
+      a3.includes("friday");
 
-const q2 =
-  a2.includes("monday");
+    const hasTime =
+      a3.includes("4") ||
+      a3.includes("4:00") ||
+      a3.includes("4 pm") ||
+      a3.includes("4pm") ||
+      a3.includes("16") ||
+      a3.includes("16:00");
 
-// Question 3
+    const q3 = hasFriday && hasTime;
 
-const hasFriday =
-  a3.includes("friday");
+    setResults({
+      q1,
+      q2,
+      q3,
+    });
 
-const hasTime =
-  a3.includes("4") ||
-  a3.includes("4:00") ||
-  a3.includes("4 pm") ||
-  a3.includes("4pm") ||
-  a3.includes("16") ||
-  a3.includes("16:00");
+    setAttempts((prev) => prev + 1);
 
-const q3 =
-  hasFriday || hasTime;
+  }
 
-setResults({
-  q1,
-  q2,
-  q3
-});
+  const allCorrect =
+    results &&
+    results.q1 &&
+    results.q2 &&
+    results.q3;
 
-setAttempts(prev => prev + 1);
+  const showAnswers =
+    results &&
+    !allCorrect &&
+    attempts >= 2;
 
-};
+  return (
 
-return (
     <div className="nextLessonCard">
 
-      <h2>📋 Your colleagues need your help</h2>
+      <div className="sectionTitle">
+
+        <ClipboardList
+          size={36}
+          strokeWidth={2.2}
+          className="sectionIcon"
+        />
+
+        <h2>Your colleagues need your help</h2>
+
+      </div>
 
       <p className="homeworkIntro">
         Read the Project Calendar and reply to their questions.
@@ -140,41 +154,65 @@ return (
 
       {results && (
 
-        <div className="feedbackBox">
+        <div style={{ marginTop: "40px" }}>
 
-          <p>
-            {results.q1
-              ? "✅ Great! The Client Meetings are on Wednesdays."
-              : attempts >= 2
-                ? "💡 Correct answer: The Client Meetings are on Wednesdays."
-                : "❌ Almost! Check the calendar again."}
-          </p>
+          <FeedbackCard
 
-          <p>
-            {results.q2
-              ? "✅ Great! The next Design Review is on Monday 22 September."
-              : attempts >= 2
-                ? "💡 Correct answer: The next Design Review is on Monday 22 September."
-                : "❌ Almost! Check the calendar again."}
-          </p>
+            correct={allCorrect}
 
-          <p>
-            {results.q3
-              ? "✅ Great! The Safety Training is on Friday 26 September at 4:00 pm."
-              : attempts >= 2
-                ? "💡 Correct answer: The Safety Training is on Friday 26 September at 4:00 pm."
-                : "❌ Almost! Check the calendar again."}
-          </p>
+            title={
+              allCorrect
+                ? "Great job!"
+                : "Almost there!"
+            }
 
-          {results.q1 && results.q2 && results.q3 && (
+            explanation={
+              allCorrect
+                ? "You answered all three questions correctly."
+                : showAnswers
+                  ? ""
+                  : "Check the calendar again."
+            }
 
-            <div className="successBanner">
+            answers={
+              showAnswers
+                ? [
+                    !results.q1 &&
+                      "The Client Meetings are <strong>ON</strong> Wednesdays.",
 
-              🎉 Excellent! You completed this activity.
+                    !results.q2 &&
+                      "The next Design Review is <strong>ON</strong> Monday 22 September.",
 
-            </div>
+                    !results.q3 &&
+                      "The Safety Training is <strong>ON</strong> Friday 26 September <strong>AT</strong> 4:00 pm.",
+                  ].filter(Boolean)
+                : undefined
+            }
 
-          )}
+            nextLabel={
+              showAnswers || allCorrect
+                ? "Continue to Writing →"
+                : "Try Again"
+            }
+
+            onNext={() => {
+
+              if (showAnswers || allCorrect) {
+
+                window.scrollTo({
+                  top: document.body.scrollHeight,
+                  behavior: "smooth",
+                });
+
+              } else {
+
+                setResults(null);
+
+              }
+
+            }}
+
+          />
 
         </div>
 

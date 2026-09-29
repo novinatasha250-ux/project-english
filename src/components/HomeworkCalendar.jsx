@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { PartyPopper, CheckCircle2 } from "lucide-react";
 
 import PrimaryButton from "./ui/PrimaryButton";
 import CalendarQuestions from "./CalendarQuestions";
@@ -24,6 +25,12 @@ export default function HomeworkCalendar() {
 
   const [completed, setCompleted] = useState(false);
 
+  useEffect(() => {
+    if (completed) {
+      window.scrollTo(0, 0);
+    }
+  }, [completed]);
+
   const submitHomework = async () => {
 
     const data = {
@@ -33,7 +40,7 @@ export default function HomeworkCalendar() {
       q2: answer2,
       q3: answer3,
       writing,
-      email: writing
+      email: writing,
     };
 
     try {
@@ -42,7 +49,7 @@ export default function HomeworkCalendar() {
         "https://script.google.com/macros/s/AKfycbwEHJ_Ned3ZRvj8LdPILREkmszw8kWyOcQjTknfdYmcgsSIqXamOvnscstFv_q_POaG/exec",
         {
           method: "POST",
-          body: JSON.stringify(data)
+          body: JSON.stringify(data),
         }
       );
 
@@ -57,47 +64,111 @@ export default function HomeworkCalendar() {
 
   };
 
-  if (completed) {
+ if (completed) {
 
-    return (
+  return (
 
-      <div className="app">
+    <div className="app">
 
-        <div className="card completionCard">
+      <div className="card completionCard">
 
-          <h1>🎉 Project Complete!</h1>
+        <img
+  src="/natalia-celebrating.png"
+  alt="Natalia celebrating"
+  className="completionNatalia"
+/>
 
-          <p className="completionText">
-            Excellent work!
-          </p>
+        <div className="sectionTitle">
 
-          <div className="completionChecklist">
+          <PartyPopper
+            size={36}
+            strokeWidth={2.2}
+            className="sectionIcon"
+          />
 
-            <p>✅ Calendar</p>
-            <p>✅ Reading</p>
-            <p>✅ Writing</p>
-
-          </div>
-
-          <p className="completionText">
-            Well done!
-          </p>
-
-          <p className="completionSignature">
-            — Natalia
-          </p>
-
-          <PrimaryButton onClick={() => navigate("/")}>
-            🏠 Return Home
-          </PrimaryButton>
+          <h1>Project Complete!</h1>
 
         </div>
 
+        <p className="completionSubtitle">
+          Congratulations! You have completed <strong>Project 01.</strong>
+        </p>
+
+        <div className="completionChecklist">
+
+          <div className="completionItem">
+
+            <CheckCircle2
+              size={22}
+              className="completionCheck"
+            />
+
+            <span>Teams Messages</span>
+
+          </div>
+
+          <div className="completionItem">
+
+            <CheckCircle2
+              size={22}
+              className="completionCheck"
+            />
+
+            <span>Email Practice</span>
+
+          </div>
+
+          <div className="completionItem">
+
+            <CheckCircle2
+              size={22}
+              className="completionCheck"
+            />
+
+            <span>Project Calendar</span>
+
+          </div>
+
+          <div className="completionItem">
+
+            <CheckCircle2
+              size={22}
+              className="completionCheck"
+            />
+
+            <span>Final Writing Task</span>
+
+          </div>
+
+        </div>
+
+        <p className="completionMessage">
+          You can now confidently use
+          <strong> IN</strong>,
+          <strong> ON</strong> and
+          <strong> AT</strong>
+          {" "}in everyday workplace situations.
+        </p>
+
+        <p className="completionSignature">
+          See you in Project 02!
+          <br />
+          <span>— Natalia</span>
+        </p>
+
+        <PrimaryButton
+          onClick={() => navigate("/")}
+        >
+          Return Home →
+        </PrimaryButton>
+
       </div>
 
-    );
+    </div>
 
-  }
+  );
+
+}
 
   return (
 
