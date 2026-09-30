@@ -1,16 +1,99 @@
-# React + Vite
+# 📘 Project English
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+An interactive English learning platform designed to help students improve their English through engaging grammar lessons, practical exercises, and homework activities.
 
-Currently, two official plugins are available:
+🌐 **Live website:**  
+https://project-english.netlify.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 📚 Interactive grammar lessons
+- 🎯 Practice activities with instant feedback
+- 📝 Homework assignments
+- 🎉 Animated feedback and progress screens
+- 📱 Responsive design for desktop and mobile
+- 🔄 Seamless navigation with React Router
+- ☁️ Hosted on Netlify
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 🛠️ Tech Stack
+
+- React
+- React Router
+- Vite
+- JavaScript (ES6+)
+- CSS
+- Netlify
+- Git & GitHub
+
+---
+
+## 🚀 Current Progress
+
+### ✅ Project 01
+
+- Grammar lesson
+- Examples
+- Interactive practice
+- Lesson completion page
+- Homework
+- Microsoft Teams task
+- Email writing task
+- Calendar activity
+
+---
+
+## 📅 Roadmap
+
+### 🔜 Project 02
+
+- New grammar topic
+- Interactive exercises
+- Homework section
+
+### Future Ideas
+
+- Vocabulary trainer
+- Progress tracking
+- Teacher dashboard
+- Student accounts
+- Certificates
+- Search function
+- Dark mode
+
+---
+
+## 💻 Local Development
+
+Clone the repository
+
+```bash
+git clone https://github.com/novinatasha250-ux/project-english.git
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run the development server
+
+```bash
+npm run dev
+```
+
+Create a production build
+
+```bash
+npm run build
+```
+
+---
+
+## 📄 License
+
+This project is for educational purposes.
