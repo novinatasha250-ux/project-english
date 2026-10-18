@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 
 import PrimaryButton from "./ui/PrimaryButton";
-import "../styles/learn.css";
+import "../styles/learn/completion.css";
 
 export default function LessonComplete01() {
 
@@ -43,13 +43,15 @@ export default function LessonComplete01() {
           <span className="activeDot"></span>
         </div>
 
-        <div className="nextLessonCard">
+        <div className="lessonCompleteCard">
 
           <img
-            src="/natalia-homework.png"
-            alt="Natalia"
-            className="lessonCompleteNatalia"
-          />
+          
+  src="/natalia-homework.png"
+  alt="Natalia"
+  className="completionNatalia"
+/>
+          
 
           <div className="lessonScore">
 

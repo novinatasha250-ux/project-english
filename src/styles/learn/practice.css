@@ -1,0 +1,736 @@
+/* ==================================================
+   QUIZ OPTIONS
+================================================== */
+
+.quizOptions{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:14px;
+
+    margin-top:30px;
+
+}
+
+.quizOption{
+
+    padding:18px;
+
+    border:2px solid #D9D9E8;
+    border-radius:18px;
+
+    background:#FFFFFF;
+
+    font-size:1.2rem;
+
+    cursor:pointer;
+
+    transition:
+        background .2s,
+        border-color .2s,
+        transform .2s;
+
+}
+
+.quizOption:hover{
+
+    border-color:#7D6AF2;
+
+}
+
+.quizOption.selected{
+
+    background:#7D6AF2;
+
+    border-color:#7D6AF2;
+
+    color:#FFFFFF;
+
+}
+
+.quizOption.correct{
+
+    background:#5BC57A;
+
+    border-color:#5BC57A;
+
+    color:#FFFFFF;
+
+}
+
+.quizOption.wrong{
+
+    background:#F56B6B;
+
+    border-color:#F56B6B;
+
+    color:#FFFFFF;
+
+}
+
+
+/* ==================================================
+   QUIZ FEEDBACK
+================================================== */
+
+.quizFeedback{
+
+    width:100%;
+
+    margin:32px auto 0;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+}
+
+
+/* ==================================================
+   FEEDBACK CARD
+================================================== */
+
+.feedbackCard{
+
+    width:100%;
+    max-width:760px;
+
+    margin:24px auto 0;
+
+    padding:28px 34px;
+
+    display:flex;
+    align-items:center;
+
+    gap:30px;
+
+    background:#F8F7FF;
+
+    border-radius:24px;
+
+    box-shadow:0 16px 35px rgba(60,50,100,.08);
+
+}
+
+
+/* ==================================================
+   LEFT SIDE
+================================================== */
+
+.feedbackLeft{
+
+    flex:0 0 90px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.feedbackNatalia{
+
+    width:92px;
+
+    display:block;
+
+}
+
+
+/* ==================================================
+   RIGHT SIDE
+================================================== */
+
+.feedbackRight{
+
+    flex:1;
+
+    min-width:0;
+
+    text-align:left;
+
+}
+
+
+/* ==================================================
+   TITLES
+================================================== */
+
+.correctTitle{
+
+    margin:0;
+
+    color:#31B56A;
+
+    font-size:3rem;
+    font-weight:800;
+
+    line-height:1;
+
+    animation:titleBounce .45s ease;
+
+}
+
+.wrongTitle{
+
+    margin:0;
+
+    color:#EB5A5A;
+
+    font-size:3rem;
+    font-weight:800;
+
+    line-height:1;
+
+    animation:titleShake .45s ease;
+
+}
+
+
+/* ==================================================
+   ANSWER
+================================================== */
+
+.feedbackAnswer{
+
+    margin:0 0 16px;
+
+}
+
+.feedbackAnswerTitle{
+
+    margin:0 0 10px;
+
+    color:#665B81;
+
+    font-size:1.05rem;
+    font-weight:700;
+
+}
+
+.feedbackBadges{
+
+    display:flex;
+    flex-wrap:wrap;
+
+    gap:10px;
+
+}
+
+.feedbackAnswerItem{
+
+    margin:0;
+
+    color:#5C5878;
+
+    font-size:1.08rem;
+    line-height:1.7;
+
+}
+
+.feedbackAnswerItem strong{
+
+    color:#7D6AF2;
+
+    font-weight:700;
+
+}
+
+
+/* ==================================================
+   INLINE ANSWER
+================================================== */
+
+.feedbackAnswerInline{
+
+    display:flex;
+    align-items:center;
+
+    gap:10px;
+
+    margin:0 0 18px;
+
+    color:#665B81;
+
+    font-size:1.08rem;
+    font-weight:600;
+
+}
+
+.feedbackAnswerInline strong{
+
+    font-weight:700;
+
+}
+
+
+/* ==================================================
+   BADGES
+================================================== */
+
+.answerBadge,
+.feedbackBadge{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:5px 14px;
+
+    border-radius:999px;
+
+    background:#F2EEFF;
+
+    color:#7D68F2;
+
+    font-weight:700;
+
+}
+
+
+/* ==================================================
+   EXPLANATION
+================================================== */
+
+.feedbackExplanation,
+.feedbackText{
+
+    margin:18px 0 24px;
+
+    max-width:440px;
+
+    color:#665B81;
+
+    font-size:1.12rem;
+
+    line-height:1.7;
+
+}
+
+
+/* ==================================================
+   SCORE
+================================================== */
+
+.scorePill{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    min-width:145px;
+
+    margin-top:24px;
+
+    padding:10px 20px;
+
+    border-radius:999px;
+
+    background:#F2EEFF;
+
+    color:#665B81;
+
+    font-size:1.05rem;
+    font-weight:700;
+
+    white-space:nowrap;
+
+    animation:scorePop .45s ease;
+
+}
+
+
+/* ==================================================
+   ACTION BUTTON
+================================================== */
+
+.quizActions{
+
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin-top:56px;
+    margin-bottom:8px;
+
+}
+
+.feedbackRight .primaryButton{
+
+    width:220px;
+
+}
+/* ==================================================
+   ANIMATIONS
+================================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(22px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes nataliaFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-5px);
+
+    }
+
+}
+
+@keyframes confettiPop{
+
+    0%{
+
+        opacity:0;
+        transform:translateX(-50%) scale(.6);
+
+    }
+
+    100%{
+
+        opacity:1;
+        transform:translateX(-50%) scale(1);
+
+    }
+
+}
+
+@keyframes swirlFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-5px) rotate(8deg);
+
+    }
+
+}
+
+@keyframes titleBounce{
+
+    0%{
+
+        transform:scale(.85);
+
+    }
+
+    60%{
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes titleShake{
+
+    0%{
+
+        transform:translateX(0);
+
+    }
+
+    20%{
+
+        transform:translateX(-4px);
+
+    }
+
+    40%{
+
+        transform:translateX(4px);
+
+    }
+
+    60%{
+
+        transform:translateX(-3px);
+
+    }
+
+    80%{
+
+        transform:translateX(3px);
+
+    }
+
+    100%{
+
+        transform:translateX(0);
+
+    }
+
+}
+
+@keyframes scorePop{
+
+    0%{
+
+        transform:scale(.8);
+        opacity:0;
+
+    }
+
+    70%{
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+        opacity:1;
+
+    }
+
+}
+
+
+/* ==================================================
+   FEEDBACK DECORATIONS
+================================================== */
+
+.feedbackNataliaWrapper{
+
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+
+    width:210px;
+    height:122px;
+
+    margin-bottom:-10px;
+
+}
+
+.feedbackNatalia{
+
+    position:relative;
+
+    width:150px;
+
+    top:4px;
+
+    z-index:2;
+
+    animation:nataliaFloat 3s ease-in-out infinite;
+
+}
+
+.confetti{
+
+    position:absolute;
+
+    width:225px;
+
+    left:50%;
+    top:0;
+
+    transform:translateX(-50%);
+
+    z-index:1;
+
+    pointer-events:none;
+
+    animation:confettiPop .7s ease;
+
+}
+
+.thinkingSwirl{
+
+    position:absolute;
+
+    width:44px;
+
+    left:50%;
+    top:-48px;
+
+    transform:translateX(16px);
+
+    z-index:3;
+
+    pointer-events:none;
+
+    animation:swirlFloat 2s ease-in-out infinite;
+
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width:1024px){
+
+    .feedbackCard{
+
+        max-width:680px;
+
+        gap:24px;
+
+        padding:24px 28px;
+
+    }
+
+    .correctTitle,
+    .wrongTitle{
+
+        font-size:1.8rem;
+
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width:768px){
+
+    .feedbackCard{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:26px 22px;
+
+        gap:18px;
+
+    }
+
+    .feedbackRight{
+
+        text-align:center;
+
+    }
+
+    .feedbackLeft{
+
+        flex:unset;
+
+    }
+
+    .feedbackNatalia{
+
+        width:84px;
+
+    }
+
+    .correctTitle,
+    .wrongTitle{
+
+        font-size:1.6rem;
+
+    }
+
+    .feedbackExplanation,
+    .feedbackText{
+
+        max-width:none;
+
+        margin:16px auto 22px;
+
+    }
+
+    .feedbackBadges{
+
+        justify-content:center;
+
+    }
+
+    .feedbackAnswerInline{
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+    }
+
+    .feedbackRight .primaryButton{
+
+        width:100%;
+
+        max-width:260px;
+
+    }
+
+    .quizActions{
+
+        margin-top:42px;
+
+    }
+
+}
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width:1024px){
+
+    .quizOption{
+        padding:16px;
+        font-size:1.1rem;
+    }
+
+    .feedbackCard{
+        max-width:680px;
+        gap:24px;
+        padding:24px 28px;
+    }
+
+    .feedbackNatalia{
+        width:130px;
+    }
+
+    .correctTitle,
+    .wrongTitle{
+        font-size:2.2rem;
+    }
+
+    .feedbackExplanation,
+    .feedbackText{
+        font-size:1.05rem;
+    }
+
+}

@@ -1,0 +1,409 @@
+/* ==================================================
+   LESSON COMPLETE
+================================================== */
+
+.lessonCompleteCard{
+
+    max-width:720px;
+
+    margin:40px auto 0;
+
+    padding:42px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    text-align:center;
+
+    background:#FBFAFF;
+
+    border-radius:28px;
+
+    box-shadow:0 14px 40px rgba(0,0,0,.08);
+
+    animation:fadeUp .55s ease;
+
+}
+
+
+/* ==================================================
+   NATALIA
+================================================== */
+
+.completionNatalia{
+
+    width:230px;
+    height:auto;
+
+    margin-bottom:22px;
+
+    animation:nataliaFloat 3s ease-in-out infinite;
+
+}
+
+
+/* ==================================================
+   SCORE
+================================================== */
+
+.lessonScore{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    gap:6px;
+
+    margin-bottom:30px;
+
+    padding:16px 30px;
+
+    background:#F2EEFF;
+
+    border-radius:24px;
+
+}
+
+.lessonStars{
+
+    color:#FFC93C;
+
+    font-size:1.5rem;
+
+    letter-spacing:2px;
+
+}
+
+.lessonFraction{
+
+    color:#665B81;
+
+    font-size:1.15rem;
+    font-weight:700;
+
+}
+
+
+/* ==================================================
+   TEXT
+================================================== */
+
+.completeTitle{
+
+    margin:0 0 16px;
+
+    color:#31B56A;
+
+    font-size:2.45rem;
+    font-weight:800;
+
+    line-height:1.1;
+
+}
+
+.completeText{
+
+    max-width:450px;
+
+    margin:0 0 34px;
+
+    color:#665B81;
+
+    font-size:1.15rem;
+
+    line-height:1.7;
+
+}
+
+
+/* ==================================================
+   CHECKLIST
+================================================== */
+
+.completeChecklist{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    gap:18px;
+
+    margin:38px 0 44px;
+
+}
+
+.checkItem{
+
+    display:flex;
+    align-items:center;
+
+    gap:14px;
+
+    color:#665B81;
+
+    font-size:1.35rem;
+    font-weight:600;
+
+}
+
+.checkIcon{
+
+    width:30px;
+    height:30px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    background:#8B6CF6;
+
+    color:#FFFFFF;
+
+    font-size:.95rem;
+    font-weight:700;
+
+    box-shadow:0 6px 16px rgba(139,108,246,.22);
+
+}
+
+
+/* ==================================================
+   HOMEWORK MESSAGE
+================================================== */
+
+.homeworkMessage{
+
+    width:100%;
+    max-width:520px;
+
+    margin:48px auto 36px;
+
+    text-align:center;
+
+}
+
+.homeworkMessage h3{
+
+    margin:0 0 14px;
+
+    color:#665B81;
+
+    font-size:2rem;
+    font-weight:800;
+
+    line-height:1.2;
+
+}
+
+.homeworkMessage p{
+
+    margin:0;
+
+    color:#665B81;
+
+    font-size:1.15rem;
+
+    line-height:1.7;
+
+}
+
+
+/* ==================================================
+   ANIMATIONS
+================================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(22px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes nataliaFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px);
+
+    }
+
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width:1024px){
+
+    .lessonCompleteCard{
+
+        max-width:620px;
+
+        padding:36px 32px;
+
+    }
+
+    .completionNatalia{
+
+        width:190px;
+
+    }
+
+    .lessonScore{
+
+        padding:14px 24px;
+
+    }
+
+    .completeTitle{
+
+        font-size:2.2rem;
+
+    }
+
+    .completeText{
+
+        max-width:420px;
+
+        font-size:1.05rem;
+
+    }
+
+    .checkItem{
+
+        font-size:1.15rem;
+
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width:768px){
+
+    .lessonCompleteCard{
+
+        padding:28px 20px;
+
+        border-radius:22px;
+
+    }
+
+    .completionNatalia{
+
+        width:150px;
+
+        margin-bottom:18px;
+
+    }
+
+    .lessonScore{
+
+        padding:14px 22px;
+
+        margin-bottom:22px;
+
+    }
+
+    .lessonStars{
+
+        font-size:1.2rem;
+
+    }
+
+    .lessonFraction{
+
+        font-size:1rem;
+
+    }
+
+    .completeTitle{
+
+        font-size:2rem;
+
+    }
+
+    .completeText{
+
+        max-width:100%;
+
+        font-size:1rem;
+
+        margin-bottom:26px;
+
+    }
+
+    .completeChecklist{
+
+        gap:16px;
+
+        margin:28px 0 34px;
+
+    }
+
+    .checkItem{
+
+        font-size:1.05rem;
+
+    }
+
+    .checkIcon{
+
+        width:26px;
+        height:26px;
+
+        font-size:.8rem;
+
+    }
+
+    .homeworkMessage{
+
+        max-width:100%;
+
+        margin:32px auto 26px;
+
+    }
+
+    .homeworkMessage h3{
+
+        font-size:1.9rem;
+
+        line-height:1.15;
+
+    }
+
+    .homeworkMessage p{
+
+        font-size:1rem;
+
+        line-height:1.6;
+
+    }
+
+}

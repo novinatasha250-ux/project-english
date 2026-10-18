@@ -1,0 +1,103 @@
+.exampleList{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:16px;
+
+    width:fit-content;
+
+    margin:0 auto;
+}
+
+.exampleItem{
+    display:flex;
+    align-items:flex-start;
+
+    gap:14px;
+
+    text-align:left;
+
+    font-size:1.12rem;
+    line-height:1.55;
+}
+
+.exampleBadge{
+    width:24px;
+    height:24px;
+
+    border-radius:50%;
+
+    background:#7D68F2;
+
+    color:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:.9rem;
+    font-weight:700;
+
+    flex-shrink:0;
+
+    margin-top:2px;
+
+    box-shadow:0 4px 10px rgba(125,104,242,.22);
+}
+
+.exampleItem strong{
+    color:#403A55;
+}
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width:1024px){
+
+    .exampleList{
+        gap:14px;
+    }
+
+    .exampleItem{
+        font-size:1.05rem;
+        gap:12px;
+    }
+
+    .exampleBadge{
+        width:22px;
+        height:22px;
+        font-size:.8rem;
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width:768px){
+
+    .exampleList{
+        width:100%;
+        gap:12px;
+    }
+
+    .exampleItem{
+        gap:10px;
+
+        font-size:1rem;
+        line-height:1.6;
+    }
+
+    .exampleBadge{
+        width:20px;
+        height:20px;
+
+        font-size:.75rem;
+
+        margin-top:3px;
+    }
+
+}

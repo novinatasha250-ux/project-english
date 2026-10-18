@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import PrimaryButton from "./ui/PrimaryButton";
-import "../styles/learn.css";
+import "../styles/learn/homework.css";
 
 export default function Homework01() {
 

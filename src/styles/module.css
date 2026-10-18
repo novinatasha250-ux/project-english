@@ -115,3 +115,111 @@
     flex-shrink: 0;
     margin-right: 4px;
 }
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width:1024px){
+
+    .modulePage{
+        max-width:760px;
+        padding:40px 24px 60px;
+    }
+
+    .projectLabel{
+        font-size:1.6rem;
+    }
+
+    .moduleTitle{
+        font-size:3.5rem;
+    }
+
+    .moduleSubtitle{
+        font-size:1.5rem;
+        margin-bottom:48px;
+    }
+
+    .resourceCard{
+        padding:30px;
+        gap:24px;
+    }
+
+    .resourceCard h2{
+        font-size:2rem;
+    }
+
+    .resourceCard p{
+        font-size:1.15rem;
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width:768px){
+
+    .modulePage{
+        padding:28px 18px 50px;
+    }
+
+    .backButton{
+        font-size:1rem;
+        margin-bottom:24px;
+    }
+
+    .projectLabel{
+        font-size:1.25rem;
+    }
+
+    .moduleTitle{
+        font-size:3rem;
+    }
+
+    .moduleSubtitle{
+        font-size:1.2rem;
+        margin-bottom:36px;
+    }
+
+    .resourceCard{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:20px;
+
+        padding:24px;
+
+    }
+
+    .resourceCard > div{
+
+        flex:none;
+
+    }
+
+    .resourceCard h2{
+
+        font-size:1.8rem;
+
+    }
+
+    .resourceCard p{
+
+        font-size:1rem;
+
+    }
+
+    .resourceCard button{
+
+        width:100%;
+        max-width:220px;
+
+        margin-right:0;
+
+    }
+
+}

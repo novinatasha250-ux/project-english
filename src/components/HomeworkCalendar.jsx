@@ -6,7 +6,7 @@ import PrimaryButton from "./ui/PrimaryButton";
 import CalendarQuestions from "./CalendarQuestions";
 import HomeworkWriting from "./HomeworkWriting";
 
-import "../styles/learn.css";
+import "../styles/learn/homework.css";
 
 export default function HomeworkCalendar() {
 

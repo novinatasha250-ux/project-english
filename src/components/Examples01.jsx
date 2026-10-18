@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 import PrimaryButton from "./ui/PrimaryButton";
-import "../styles/learn.css";
+import "../styles/learn/examples.css";
 
 import {
   Clock3,

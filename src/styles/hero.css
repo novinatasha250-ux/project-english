@@ -94,3 +94,84 @@
 
     color: #666666;
 }
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width:1024px){
+
+    .logo{
+        font-size:66px;
+    }
+
+    .motto{
+        font-size:20px;
+        margin:18px 0 40px;
+    }
+
+    .hero{
+        max-width:900px;
+        padding:0 28px;
+        gap:28px;
+        margin-bottom:70px;
+    }
+
+    .heroCharacter{
+        width:320px;
+    }
+
+    .heroText h2{
+        font-size:2.5rem;
+    }
+
+    .heroText p{
+        font-size:1.3rem;
+    }
+
+}
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width:768px){
+
+    .logo{
+        font-size:58px;
+        line-height:.95;
+        letter-spacing:-1px;
+    }
+
+    .motto{
+        font-size:18px;
+        margin:16px 0 36px;
+    }
+
+    .hero{
+        flex-direction:column;
+        padding:0 20px;
+        gap:24px;
+        margin:0 auto 50px;
+    }
+
+    .heroCharacter{
+        width:240px;
+        order:1;
+    }
+
+    .heroText{
+        order:2;
+        max-width:100%;
+    }
+
+    .heroText h2{
+        font-size:2rem;
+        margin-bottom:14px;
+    }
+
+    .heroText p{
+        max-width:100%;
+        font-size:1.15rem;
+        line-height:1.6;
+    }
+
+}

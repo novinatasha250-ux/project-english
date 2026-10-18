@@ -26,3 +26,37 @@ body {
 
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
 }
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1024px) {
+
+    .app {
+        padding: 24px;
+    }
+
+    .card {
+        padding: 40px 32px;
+    }
+
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 768px) {
+
+    .app {
+        padding: 12px;
+    }
+
+    .card {
+        width: 100%;
+        min-width: 0;
+        padding: 28px 18px;
+        border-radius: 22px;
+    }
+
+}

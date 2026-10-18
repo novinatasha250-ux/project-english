@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import PrimaryButton from "./ui/PrimaryButton";
 import FeedbackCard from "./ui/FeedbackCard";
-import "../styles/learn.css";
+import "../styles/learn/homework.css";
 
 const messages = [
   {

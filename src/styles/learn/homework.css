@@ -1,0 +1,987 @@
+/* ==================================================
+   HOMEWORK INTRO
+================================================== */
+
+.homeworkIntro{
+    text-align:center;
+    color:#6F6486;
+    margin-bottom:50px;
+    font-size:1.1rem;
+}
+
+.homeworkMessage{
+
+    max-width:520px;
+    margin:48px auto 34px;
+
+    text-align:center;
+
+}
+
+.homeworkMessage h3{
+
+    margin:0 0 14px;
+
+    color:#665B81;
+
+    font-size:2rem;
+    font-weight:800;
+
+}
+
+.homeworkMessage p{
+
+    margin:0;
+
+    color:#665B81;
+
+    font-size:1.15rem;
+    line-height:1.7;
+
+}
+
+
+/* ==================================================
+   SHARED INPUTS
+================================================== */
+
+.nameSection{
+
+    margin-top:40px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+}
+
+.nameLabel{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    margin-bottom:20px;
+
+    padding:12px 26px;
+
+    border-radius:999px;
+
+    background:#F2EEFF;
+
+    color:#665B81;
+
+    font-size:1.08rem;
+    font-weight:700;
+
+    text-align:center;
+
+    box-shadow:0 6px 18px rgba(125,104,242,.08);
+
+}
+
+.nameInput,
+.answerInput{
+
+    width:100%;
+    box-sizing:border-box;
+
+    padding:18px 22px;
+
+    border:2px solid #E3E2F3;
+    border-radius:18px;
+
+    background:#FFFFFF;
+
+    color:#2D2A38;
+
+    font-size:1.08rem;
+    font-family:inherit;
+
+    outline:none;
+
+    transition:all .25s ease;
+
+}
+
+.nameInput{
+
+    max-width:400px;
+
+}
+
+.nameInput::placeholder,
+.answerInput::placeholder{
+
+    color:#A19ABF;
+
+}
+
+.nameInput:focus,
+.answerInput:focus{
+
+    border-color:#7D68F2;
+
+    box-shadow:0 0 0 5px rgba(125,104,242,.12);
+
+}
+
+.emailBody .answerInput{
+
+    margin-top:12px;
+
+}
+
+.smallInput{
+
+    width:72px;
+
+    border:none;
+    border-bottom:2px solid #7D6AF2;
+
+    background:transparent;
+
+    outline:none;
+
+    text-align:center;
+
+    font-size:1rem;
+    font-family:inherit;
+
+    color:#56516F;
+
+    padding:4px;
+
+    margin-right:8px;
+
+}
+
+
+/* ==================================================
+   TEAMS
+================================================== */
+
+.teamsCard{
+
+    max-width:700px;
+    margin:0 auto;
+
+}
+
+.teamsTop{
+
+    display:flex;
+    align-items:flex-start;
+
+    gap:18px;
+
+    margin-bottom:18px;
+
+}
+
+.avatar{
+
+    width:54px;
+    height:54px;
+
+    border-radius:50%;
+
+    background:#7D6AF2;
+
+    color:#FFFFFF;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:22px;
+    font-weight:700;
+
+    flex-shrink:0;
+
+}
+
+.teamsInfo{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:4px;
+}
+
+.teamsName{
+    margin:0;
+
+    font-size:1.35rem;
+    font-weight:700;
+    color:#2D2D2D;
+}
+
+.teamsTime{
+    margin:0;
+
+    color:#8D8D8D;
+    font-size:.95rem;
+}
+
+.teamsBubble{
+
+    width:fit-content;
+    max-width:560px;
+
+    margin-left:72px;
+    margin-bottom:30px;
+
+    padding:26px 30px;
+
+    background:#F4F6FC;
+
+    border-radius:22px;
+
+    text-align:left;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.05);
+
+}
+
+.teamsBubble p{
+
+    margin:10px 0;
+
+    font-size:1.15rem;
+    line-height:1.7;
+
+}
+
+
+/* ==================================================
+   EMAIL
+================================================== */
+
+.emailCard{
+
+    max-width:760px;
+
+    margin:0 auto;
+
+    background:#FFFFFF;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+}
+
+.emailHeader{
+
+    background:#F5F3FF;
+
+    padding:22px 36px;
+
+    border-bottom:1px solid #E5E1FF;
+
+}
+
+.emailHeader p{
+
+    display:flex;
+    align-items:center;
+
+    margin:0;
+
+    padding:12px 0;
+
+    border-bottom:1px solid #ECEAF8;
+
+}
+
+.emailHeader p:last-child{
+
+    border-bottom:none;
+
+}
+
+.emailLabel{
+
+    width:90px;
+
+    color:#6D5DF6;
+
+    font-weight:700;
+
+    flex-shrink:0;
+
+}
+
+.emailValue{
+
+    color:#4E4E73;
+
+}
+
+.emailBody{
+
+    padding:42px 48px;
+
+    text-align:left;
+
+    font-size:1.15rem;
+    line-height:1.9;
+
+}
+
+.emailBody p{
+
+    margin:0;
+
+}
+
+.emailGap{
+
+    height:24px;
+
+}
+
+.emailIndent{
+
+    margin-left:32px;
+
+}
+
+
+/* ==================================================
+   WRITING
+================================================== */
+
+.writingCard{
+
+    max-width:1000px;
+
+    margin:56px auto 0;
+
+    padding:48px 56px;
+
+    background:#FFFFFF;
+
+    border-radius:28px;
+
+    box-shadow:0 14px 40px rgba(0,0,0,.08);
+
+}
+
+.sectionTitle{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:14px;
+
+    margin-bottom:18px;
+
+}
+
+.sectionIcon{
+
+    color:#7D6AF2;
+
+    flex-shrink:0;
+
+}
+
+.writingTask{
+
+    margin:32px 0;
+
+    padding:28px 34px;
+
+    background:#FAF9FF;
+
+    border:2px solid #ECE8FF;
+
+    border-radius:20px;
+
+    text-align:left;
+
+}
+
+.writingTask h3{
+
+    margin:0 0 18px;
+
+    color:#6D5DF6;
+
+    font-size:1.55rem;
+
+}
+
+.writingTask p,
+.writingTask li{
+
+    color:#56516F;
+
+    font-size:1.08rem;
+
+}
+
+.writingTask ul{
+
+    margin:18px 0;
+
+    padding-left:22px;
+
+    line-height:1.9;
+
+}
+
+.writingBox{
+
+    width:100%;
+    min-height:240px;
+
+    box-sizing:border-box;
+
+    margin:18px 0 28px;
+
+    padding:22px;
+
+    background:#FFFFFF;
+
+    border:2px solid #E3E2F3;
+    border-radius:18px;
+
+    resize:vertical;
+
+    outline:none;
+
+    font-family:inherit;
+
+    font-size:1.05rem;
+    line-height:1.8;
+
+    color:#56516F;
+
+    transition:.2s;
+
+}
+
+.writingBox::placeholder{
+
+    color:#A19DBD;
+
+}
+
+.writingBox:focus{
+
+    border-color:#7D6AF2;
+
+    box-shadow:0 0 0 4px rgba(125,106,242,.12);
+
+}
+
+
+/* ==================================================
+   CALENDAR
+================================================== */
+
+.calendarCard{
+
+    max-width:900px;
+
+    margin:0 auto;
+
+    padding:40px;
+
+    background:#FFFFFF;
+
+    border-radius:24px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+}
+
+.calendarMonth{
+
+    margin-bottom:30px;
+
+    text-align:center;
+
+    font-size:2rem;
+
+}
+
+.calendarGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:16px;
+
+}
+
+.calendarHeading{
+
+    padding-bottom:10px;
+
+    text-align:center;
+
+    color:#6F6486;
+
+    font-weight:700;
+
+}
+
+.calendarCell{
+
+    min-height:120px;
+
+    padding:10px;
+
+    background:#FAFBFF;
+
+    border:1px solid #ECECF4;
+    border-radius:14px;
+
+}
+
+.calendarDate{
+
+    margin-bottom:8px;
+
+    font-weight:700;
+
+}
+
+.calendarEvent{
+
+    margin-top:8px;
+
+    padding:8px;
+
+    border-radius:10px;
+
+    color:#FFFFFF;
+
+    font-size:.82rem;
+    line-height:1.35;
+
+}
+
+.calendarEvent.purple{background:#7D6AF2;}
+.calendarEvent.blue{background:#5B8DEF;}
+.calendarEvent.green{background:#55B878;}
+.calendarEvent.orange{background:#F2A65A;}
+
+
+/* ==================================================
+   HOMEWORK QUESTIONS
+================================================== */
+
+.homeworkQuestion{
+
+    width:100%;
+    max-width:640px;
+
+    margin:0 auto 42px;
+
+    text-align:left;
+
+}
+
+.questionName{
+
+    display:inline-flex;
+    align-items:center;
+
+    margin-bottom:18px;
+
+    padding:8px 18px;
+
+    background:#F3F1FF;
+
+    border-radius:999px;
+
+    color:#7D6AF2;
+
+    font-size:.95rem;
+    font-weight:700;
+
+}
+
+.questionText{
+
+    margin:0 0 16px;
+
+    color:#56516F;
+
+    font-size:1.15rem;
+    line-height:1.6;
+
+}
+
+.homeworkButton{
+
+    margin-top:40px;
+
+    text-align:center;
+
+}
+
+
+/* ==================================================
+   COMPLETION
+================================================== */
+
+.completionCard{
+
+    padding:60px 50px;
+
+    text-align:center;
+
+}
+
+.completionChecklist{
+
+    margin:35px 0;
+
+    font-size:1.15rem;
+    line-height:2.2;
+
+}
+
+.completionText{
+
+    margin:18px 0;
+
+    font-size:1.15rem;
+
+}
+
+.completionSignature{
+
+    margin:35px 0;
+
+    color:#7A6BB7;
+
+    font-style:italic;
+
+}
+
+
+/* ==================================================
+   RESOURCES
+================================================== */
+
+.resourceTitle{
+
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.resourceHeading{
+
+    display:flex;
+    align-items:center;
+
+    gap:24px;
+
+}
+
+.resourceIconCircle{
+
+    width:92px;
+    height:92px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    flex-shrink:0;
+
+    background:#F3EEFF;
+
+    border-radius:50%;
+
+}
+
+.resourceIcon,
+.resourceTitle .resourceIcon{
+
+    width:46px;
+    height:46px;
+
+    color:#7C6CF3;
+
+}
+
+.resourceHeading h2{
+
+    margin:0;
+
+}
+
+.resourceHeading p{
+
+    margin-top:8px;
+
+}
+
+
+
+/* ==================================================
+   HOMEWORK INTRO CARD
+================================================== */
+
+.nextLessonCard{
+
+    max-width:760px;
+    margin:40px auto 0;
+    padding:50px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    text-align:center;
+
+    gap:32px;
+
+    background:#FBFAFF;
+    border-radius:28px;
+
+    box-shadow:0 14px 40px rgba(0,0,0,.08);
+
+}
+
+.lessonCompleteNatalia{
+
+    width:260px;
+    height:auto;
+
+}
+
+.goalCard{
+
+    max-width:520px;
+
+}
+
+.goalTitle{
+
+    margin:0 0 16px;
+
+    font-size:2.1rem;
+    font-weight:800;
+
+    color:#25213A;
+
+}
+
+.goalText{
+
+    margin:0;
+
+    font-size:1.2rem;
+    line-height:1.8;
+
+    color:#665B81;
+
+}
+
+.completeChecklist{
+
+    align-items:flex-start;
+    display:flex;
+    flex-direction:column;
+
+    gap:18px;
+
+    margin:0;
+
+}
+
+.checkItem{
+
+    display:flex;
+    align-items:center;
+
+    gap:16px;
+
+    font-size:1.35rem;
+    font-weight:700;
+
+    color:#665B81;
+
+}
+
+.estimatedTime{
+
+    text-align:center;
+
+}
+
+.timeLabel{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    color:#6F6486;
+
+    font-size:1.1rem;
+
+}
+
+.timeValue{
+
+    font-size:1.5rem;
+    font-weight:800;
+
+    color:#665B81;
+
+}
+
+.nameSection{
+
+    width:100%;
+    max-width:420px;
+
+    margin:0;
+
+}
+
+.nameInput{
+
+    width:100%;
+    max-width:560px;
+
+}
+
+/* ===============================
+   PROJECT COMPLETE
+================================ */
+
+.completionItem{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    margin:12px 0;
+}
+
+.completionCheck{
+    color:#8B6CF6;
+    stroke:#8B6CF6;
+    flex-shrink:0;
+}
+
+.completionSignature{
+    margin-top:48px;
+    color:#8B6CF6;
+    font-size:1.15rem;
+    font-style:italic;
+    line-height:1.7;
+}
+
+.completionSignature span{
+    color:#8B6CF6;
+}
+
+/* ==================================================
+   TABLET | 769px to 1024px
+================================================== */
+@media (max-width:1024px) {
+    .nextLessonCard { max-width:680px; padding:38px 32px; gap:28px; }
+    .lessonCompleteNatalia { width:210px; max-width:100%; }
+    .goalTitle { font-size:1.9rem; }
+    .goalText { font-size:1.1rem; }
+    .checkItem { font-size:1.2rem; }
+    .writingCard { max-width:100%; padding:36px 30px; }
+    .calendarCard { max-width:100%; padding:30px; }
+    .teamsCard, .emailCard, .homeworkQuestion { max-width:100%; }
+    .emailBody { padding:32px; }
+    .resourceHeading { gap:18px; }
+    .resourceIconCircle { width:76px; height:76px; }
+}
+
+/* ==================================================
+   MOBILE | up to 768px
+================================================== */
+@media (max-width:768px) {
+    .homeworkIntro { font-size:1rem; margin-bottom:30px; }
+    .homeworkMessage { max-width:100%; margin:30px auto; }
+    .homeworkMessage h3 { font-size:1.6rem; }
+    .homeworkMessage p { font-size:1rem; }
+
+    /* Homework intro */
+    .nextLessonCard { width:100%; max-width:100%; min-width:0; margin:24px auto 0; padding:28px 20px; gap:24px; border-radius:22px; }
+    .lessonCompleteNatalia { width:170px; max-width:100%; }
+    .goalCard { max-width:100%; min-width:0; }
+    .goalTitle { font-size:1.7rem; line-height:1.2; }
+    .goalText { font-size:1rem; line-height:1.65; }
+    .completeChecklist { align-items:flex-start; gap:16px; max-width:100%; }
+    .checkItem { gap:12px; font-size:1rem; line-height:1.4; }
+    .estimatedTime { margin-top:4px; }
+    .timeLabel { font-size:1rem; }
+    .timeValue { font-size:1.5rem; }
+    .nameSection { width:100%; max-width:100%; min-width:0; }
+    .nameLabel { max-width:100%; padding:12px 18px; font-size:1rem; border-radius:22px; }
+    .nameInput { max-width:100%; }
+    .nameInput, .answerInput { padding:14px 16px; font-size:1rem; }
+
+    /* Teams */
+    .teamsCard { width:100%; min-width:0; }
+    .teamsTop { gap:12px; }
+    .avatar { width:46px; height:46px; font-size:18px; }
+    .teamsInfo { min-width:0; }
+    .teamsName { font-size:1.15rem; }
+    .teamsTime { font-size:.9rem; }
+    .teamsBubble { max-width:100%; margin-left:0; padding:18px 20px; overflow-wrap:anywhere; }
+    .teamsBubble p { font-size:1rem; }
+
+    /* Email */
+    .emailCard { width:100%; max-width:100%; min-width:0; }
+    .emailHeader { padding:18px; }
+    .emailHeader p { flex-direction:column; align-items:flex-start; gap:4px; }
+    .emailLabel { width:auto; }
+    .emailValue { overflow-wrap:anywhere; }
+    .emailBody { padding:24px 20px; font-size:1rem; overflow-wrap:anywhere; }
+    .emailIndent { margin-left:16px; }
+    .smallInput { width:60px; max-width:100%; }
+
+    /* Writing */
+    .writingCard { width:100%; max-width:100%; min-width:0; margin:28px auto 0; padding:24px 18px; border-radius:22px; }
+    .writingTask { width:100%; min-width:0; margin:22px 0; padding:20px 16px; }
+    .writingTask h3 { font-size:1.3rem; }
+    .writingTask p, .writingTask li { font-size:1rem; overflow-wrap:anywhere; }
+    .writingBox { width:100%; min-width:0; min-height:180px; padding:16px; font-size:1rem; }
+    .sectionTitle { gap:10px; flex-wrap:wrap; }
+
+    /* Calendar: scroll inside card, not across entire page */
+    .calendarCard { width:100%; max-width:100%; min-width:0; padding:18px 12px; overflow-x:auto; overflow-y:hidden; border-radius:22px; -webkit-overflow-scrolling:touch; }
+    .calendarMonth { font-size:1.5rem; margin-bottom:18px; }
+    .calendarGrid { width:560px; min-width:560px; grid-template-columns:repeat(5,minmax(0,1fr)); gap:8px; }
+    .calendarHeading { font-size:.85rem; white-space:nowrap; }
+    .calendarCell { min-width:0; min-height:100px; padding:8px; }
+    .calendarEvent { font-size:.75rem; padding:6px; overflow-wrap:anywhere; }
+
+    /* Questions, completion and resources */
+    .homeworkQuestion { width:100%; max-width:100%; min-width:0; margin-bottom:30px; }
+    .questionText { font-size:1rem; }
+    .homeworkButton { margin-top:28px; }
+    .completionCard { padding:30px 18px; }
+    .completionChecklist { font-size:1rem; line-height:1.8; }
+    .completionItem { gap:12px; justify-content:flex-start; width:fit-content; max-width:100%; margin:12px auto; text-align:left; }
+    .completionText { font-size:1rem; }
+    .completionSignature { font-size:1.05rem; margin-top:36px; }
+    .resourceHeading { flex-direction:column; text-align:center; gap:14px; }
+    .resourceIconCircle { width:68px; height:68px; }
+    .resourceIcon, .resourceTitle .resourceIcon { width:36px; height:36px; }
+    .resourceTitle { flex-wrap:wrap; justify-content:center; }
+}
