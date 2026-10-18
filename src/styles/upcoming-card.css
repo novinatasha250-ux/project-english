@@ -17,3 +17,15 @@
 
     color: #17141F;
 }
+.upcomingCard .lockedButton {
+  background: #7d68f2;
+  color: white;
+  cursor: pointer;
+  pointer-events: auto;
+  opacity: 1;
+  border: none;
+}
+
+.upcomingCard .lockedButton:hover {
+  background: #6b57df;
+}
