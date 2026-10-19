@@ -1,6 +1,7 @@
 import Hero from "./Hero";
 import ProjectCard from "./ui/ProjectCard";
 import UpcomingCard from "./ui/UpcomingCard";
+import ComingSoonCard from "./ui/ComingSoonCard";
 
 export default function Home() {
   return (
@@ -11,6 +12,8 @@ export default function Home() {
         <ProjectCard />
 
         <UpcomingCard />
+
+        <ComingSoonCard />
       </div>
     </div>
   );

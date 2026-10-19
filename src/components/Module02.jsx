@@ -37,9 +37,7 @@ export default function Module02() {
         <div className="resourceHeading">
 
           <div className="resourceIconCircle">
-            <BookOpen
-              className="resourceIcon"
-            />
+            <BookOpen className="resourceIcon" />
           </div>
 
           <div>
@@ -77,21 +75,11 @@ export default function Module02() {
 
         </div>
 
-        <button
-          type="button"
-          disabled
-          style={{
-            padding: "14px 28px",
-            border: "none",
-            borderRadius: "14px",
-            background: "#e9e7ee",
-            color: "#77717f",
-            fontWeight: 700,
-            cursor: "not-allowed"
-          }}
+        <PrimaryButton
+          onClick={() => navigate("/project02/homework")}
         >
-          Coming Soon
-        </button>
+          Open
+        </PrimaryButton>
 
       </div>
 

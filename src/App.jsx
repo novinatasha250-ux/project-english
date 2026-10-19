@@ -23,6 +23,10 @@ import Module02 from "./components/Module02";
 import Examples02 from "./components/Examples02";
 import Practice02 from "./components/Practice02";
 import LessonComplete02 from "./components/LessonComplete02";
+import Homework02 from "./components/Homework02";
+import HomeworkTeams02 from "./components/HomeworkTeams02";
+import HomeworkEmail02 from "./components/HomeworkEmail02";
+import HomeworkCalendar02 from "./components/HomeworkCalendar02";
 
 export default function App() {
   return (
@@ -68,6 +72,27 @@ export default function App() {
 <Route path="/project02/examples" element={<Examples02 />} />
 <Route path="/project02/practice" element={<Practice02 />} />
 <Route path="/project02/complete" element={<LessonComplete02 />} />
+{/* PROJECT 02 HOMEWORK */}
+
+<Route
+  path="/project02/homework"
+  element={<Homework02 />}
+/>
+
+<Route
+  path="/project02/homework/teams"
+  element={<HomeworkTeams02 />}
+/>
+
+<Route
+  path="/project02/homework/email"
+  element={<HomeworkEmail02 />}
+/>
+
+<Route
+  path="/project02/homework/calendar"
+  element={<HomeworkCalendar02 />}
+/>
 
       </Routes>
     </>

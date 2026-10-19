@@ -1,13 +1,13 @@
 
 import { useNavigate } from "react-router-dom";
-import "../../styles/upcoming-card.css";
+import "../../styles/project-card.css";
+import PrimaryButton from "./PrimaryButton";
 
 export default function UpcomingCard() {
   const navigate = useNavigate();
 
   return (
-    <div className="upcomingCard">
-
+    <div className="projectCard">
       <div className="projectNumber">
         Project 02
       </div>
@@ -18,13 +18,11 @@ export default function UpcomingCard() {
         A2 • 20 min
       </p>
 
-      <button
-        className="lockedButton"
+      <PrimaryButton
         onClick={() => navigate("/project02")}
       >
-        Start Project →
-      </button>
-
+        Start Project
+      </PrimaryButton>
     </div>
   );
 }

@@ -99,19 +99,23 @@ export default function LessonComplete02() {
               Great progress!
             </h3>
 
-            <p>
-              You've completed the lesson on
-              prepositions of place.
-              More practice is coming soon!
-            </p>
+            <div className="homeworkMessage">
+  <h3>Ready for your homework?</h3>
+
+  <p>
+    Practise AT, ON and IN with office locations,
+    messages, emails and meeting schedules.
+    You'll also review prepositions of time!
+  </p>
+</div>
 
           </div>
 
           <PrimaryButton
-            onClick={() => navigate("/project02")}
-          >
-            Return to Project 02 →
-          </PrimaryButton>
+  onClick={() => navigate("/project02/homework")}
+>
+  Start Homework →
+</PrimaryButton>
 
         </div>
 
