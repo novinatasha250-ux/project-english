@@ -1,9 +1,15 @@
 
+import { useNavigate } from "react-router-dom";
+
 import "../../styles/project-card.css";
+import PrimaryButton from "./PrimaryButton";
 
 export default function ComingSoonCard() {
+  const navigate = useNavigate();
+
   return (
     <div className="projectCard comingSoonCard">
+
       <div className="projectNumber">
         Project 03
       </div>
@@ -11,15 +17,15 @@ export default function ComingSoonCard() {
       <h3>There is / There are</h3>
 
       <p className="projectInfo">
-        A2 • Coming Soon
+        A2 • 20 min
       </p>
 
-      <button
-        className="comingSoonButton"
-        disabled
+      <PrimaryButton
+        onClick={() => navigate("/project03")}
       >
-        Coming Soon
-      </button>
+        Start Project
+      </PrimaryButton>
+
     </div>
   );
 }
