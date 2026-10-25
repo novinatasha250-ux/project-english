@@ -1,0 +1,1136 @@
+
+/* =========================================
+   PROJECT 03 — HOMEWORK INTRODUCTION
+========================================= */
+
+.p03h-page {
+  --h-purple: #7662dc;
+  --h-ink: #29243c;
+  --h-muted: #746e84;
+  --h-border: #e9e4f1;
+  color: var(--h-ink);
+}
+
+.p03h-page *,
+.p03h-page *::before,
+.p03h-page *::after {
+  box-sizing: border-box;
+}
+
+.p03h-projectLabel {
+  margin: 20px 0 14px;
+  color: var(--h-purple);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.p03h-eyebrow {
+  color: var(--h-purple);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+/* HERO */
+
+.p03h-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 45px 42px;
+  border: 1px solid #eae4f7;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 85% 15%, #e7ddff, transparent 42%),
+    linear-gradient(135deg, #faf7ff, #f1ecff);
+  overflow: hidden;
+}
+
+.p03h-heroText {
+  flex: 1;
+  min-width: 0;
+}
+
+.p03h-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 15px;
+  border-radius: 100px;
+  background: white;
+  color: var(--h-purple);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.p03h-hero h1 {
+  margin: 25px 0 17px;
+  font-size: clamp(2.3rem, 4vw, 3.6rem);
+  line-height: 1.12;
+  letter-spacing: -0.05em;
+  color: #42356e;
+}
+
+.p03h-hero h1 span {
+  color: #8067df;
+}
+
+.p03h-heroText > p {
+  max-width: 540px;
+  margin: 0;
+  color: #665d7b;
+  font-size: 1.04rem;
+  line-height: 1.8;
+}
+
+.p03h-heroTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 25px;
+}
+
+.p03h-heroTags span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 12px;
+  border: 1px solid #e1d8f7;
+  border-radius: 9px;
+  background: rgba(255,255,255,0.7);
+  color: #62547e;
+  font-size: 0.8rem;
+  font-weight: 650;
+}
+
+.p03h-heroNatalia {
+  width: 230px;
+  max-width: 32%;
+  height: auto;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+/* INTRODUCTION */
+
+.p03h-intro {
+  max-width: 760px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.p03h-intro h2,
+.p03h-sectionHeading h2,
+.p03h-start h2 {
+  margin: 12px 0 17px;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  letter-spacing: -0.04em;
+}
+
+.p03h-intro p {
+  margin: 12px auto;
+  color: var(--h-muted);
+  line-height: 1.8;
+}
+
+/* ACTIVITIES */
+
+.p03h-activities {
+  margin: 55px 0;
+}
+
+.p03h-sectionHeading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.p03h-sectionHeading p {
+  color: var(--h-muted);
+}
+
+.p03h-activityGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.p03h-activityCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 27px;
+  border: 1px solid var(--h-border);
+  border-radius: 22px;
+  background: white;
+  box-shadow: 0 8px 25px rgba(55,35,90,0.035);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.p03h-activityCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(55,35,90,0.08);
+}
+
+.p03h-activityTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.p03h-activityNumber {
+  color: #9a8caf;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.p03h-activityIcon {
+  display: grid;
+  place-items: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 16px;
+  background: #f0eaff;
+  color: #8067d8;
+}
+
+.p03h-activityCard:nth-child(2) .p03h-activityIcon {
+  background: #e5f5f1;
+  color: #348e88;
+}
+
+.p03h-activityCard:nth-child(3) .p03h-activityIcon {
+  background: #fff0e8;
+  color: #c27a4b;
+}
+
+.p03h-activityCard h3 {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+}
+
+.p03h-activityCard p {
+  flex: 1;
+  margin: 0 0 20px;
+  color: var(--h-muted);
+  line-height: 1.7;
+}
+
+.p03h-activityDetail {
+  padding: 7px 11px;
+  border-radius: 8px;
+  background: #f7f4fd;
+  color: #6e59bd;
+  font-size: 0.8rem;
+  font-weight: 750;
+}
+
+/* GRAMMAR REMINDER */
+
+.p03h-reminder {
+  padding: 30px;
+  border: 1px solid #e9e1f7;
+  border-radius: 23px;
+  background: #f8f5ff;
+  margin-bottom: 55px;
+}
+
+.p03h-reminderHeading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+  color: var(--h-purple);
+}
+
+.p03h-reminderHeading h3 {
+  margin: 0;
+  color: #42356e;
+  font-size: 1.3rem;
+}
+
+.p03h-reminderGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.p03h-reminderGrid > div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 17px;
+  border: 1px solid #e9e4f1;
+  border-radius: 13px;
+  background: white;
+}
+
+.p03h-reminderGrid strong {
+  color: #56418d;
+}
+
+.p03h-reminderGrid span {
+  color: var(--h-muted);
+  font-size: 0.85rem;
+}
+
+/* START SECTION */
+
+.p03h-start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 30px;
+  border: 1px solid #e9e1f7;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #f8f5ff, #f1ecff);
+  text-align: center;
+}
+
+.p03h-start > p {
+  max-width: 490px;
+  margin: 0 0 25px;
+  color: var(--h-muted);
+  line-height: 1.7;
+}
+
+.p03h-nameField {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.p03h-nameField label {
+  color: #56418d;
+  font-size: 0.9rem;
+  font-weight: 750;
+}
+
+.p03h-nameField input {
+  width: 100%;
+  padding: 15px 17px;
+  border: 1.5px solid #dcd3ef;
+  border-radius: 12px;
+  background: white;
+  color: #29243c;
+  font: inherit;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.p03h-nameField input:focus {
+  border-color: #8067df;
+  box-shadow: 0 0 0 4px rgba(128,103,223,0.12);
+}
+
+.p03h-error {
+  color: #b34455;
+  font-size: 0.85rem;
+}
+
+.p03h-start > button {
+  min-width: 210px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .p03h-hero {
+    flex-direction: column-reverse;
+    padding: 30px 22px;
+    text-align: center;
+  }
+
+  .p03h-heroNatalia {
+    width: 165px;
+    max-width: 100%;
+  }
+
+  .p03h-hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .p03h-heroTags {
+    justify-content: center;
+  }
+
+  .p03h-intro {
+    margin: 45px auto;
+  }
+
+  .p03h-activityGrid,
+  .p03h-reminderGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .p03h-activityCard {
+    padding: 22px;
+  }
+
+  .p03h-reminder {
+    padding: 23px 18px;
+  }
+
+  .p03h-start {
+    padding: 32px 20px;
+  }
+
+  .p03h-start > button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .p03h-activityCard {
+    transition: none;
+  }
+}
+
+/* =========================================
+   HOMEWORK 03 — ACTIVITY 01: TEAMS
+========================================= */
+
+.p03h-activityHero {
+  margin-bottom: 38px;
+}
+
+.p03h-activityHero h1 {
+  font-size: clamp(2.4rem, 4vw, 3.5rem);
+}
+
+.p03h-teamsProgress {
+  max-width: 850px;
+  margin: 0 auto 44px;
+}
+
+.p03h-teamsProgressText {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  color: #7863d9;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+}
+
+.p03h-teamsProgressTrack {
+  height: 9px;
+  overflow: hidden;
+  border-radius: 100px;
+  background: #eae5f5;
+}
+
+.p03h-teamsProgressTrack > div {
+  height: 100%;
+  border-radius: inherit;
+  background: #8067df;
+  transition: width 0.3s ease;
+}
+
+.p03h-teamsQuestion {
+  max-width: 850px;
+  margin: 0 auto;
+  scroll-margin-top: 30px;
+}
+
+.p03h-teamsQuestionHeading {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.p03h-teamsQuestionHeading h2 {
+  margin: 12px 0;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  letter-spacing: -0.04em;
+}
+
+.p03h-teamsQuestionHeading p {
+  color: #746e84;
+  line-height: 1.7;
+}
+
+.p03h-chatCard {
+  padding: 28px;
+  border: 1px solid #e7e1f1;
+  border-radius: 23px;
+  background: #f8f6fc;
+}
+
+.p03h-chatHeader {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 22px;
+}
+
+.p03h-chatAvatar {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 15px;
+  background: #e8dfff;
+  color: #7159cc;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.p03h-chatSender {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.p03h-chatSender strong {
+  color: #2c2540;
+  font-size: 1.05rem;
+}
+
+.p03h-chatSender span,
+.p03h-chatTime {
+  color: #837b94;
+  font-size: 0.85rem;
+}
+
+.p03h-chatTime {
+  margin-left: auto;
+}
+
+.p03h-chatMessage {
+  padding: 26px;
+  border-radius: 16px;
+  background: white;
+  color: #2c2540;
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-weight: 550;
+  line-height: 1.7;
+}
+
+.p03h-answerOptions {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.p03h-answerOption {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  padding: 17px 20px;
+  border: 1.5px solid #e5def0;
+  border-radius: 14px;
+  background: white;
+  color: #29243c;
+  font: inherit;
+  font-size: 1.08rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.p03h-answerOption:not(:disabled):hover {
+  border-color: #a994f0;
+  background: #faf8ff;
+}
+
+.p03h-answerOption.selected {
+  border-color: #8067df;
+  background: #f3eeff;
+}
+
+.p03h-answerOption.correct {
+  border-color: #86c8a3;
+  background: #e9f7ef;
+  color: #23764e;
+}
+
+.p03h-answerOption.wrong {
+  border-color: #efaaaa;
+  background: #fff0f0;
+  color: #ba4b52;
+}
+
+.p03h-answerOption:disabled {
+  cursor: default;
+  opacity: 1;
+}
+
+.p03h-answerOption > svg:last-child {
+  margin-left: auto;
+}
+
+.p03h-optionLetter {
+  display: grid;
+  place-items: center;
+  width: 37px;
+  height: 37px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #f0eaff;
+  color: #7863d9;
+  font-weight: 800;
+}
+
+.p03h-answerFeedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+  padding: 30px 25px;
+  border: 1px solid;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.p03h-answerFeedback.correct {
+  border-color: #c6ead3;
+  background: #eaf8ef;
+}
+
+.p03h-answerFeedback.wrong {
+  border-color: #f6d8c3;
+  background: #fff3ec;
+}
+
+.p03h-feedbackIcon {
+  color: #238255;
+}
+
+.p03h-answerFeedback.wrong .p03h-feedbackIcon {
+  color: #b66c41;
+}
+
+.p03h-answerFeedback h3 {
+  margin: 0;
+  color: #23764e;
+  font-size: 1.65rem;
+}
+
+.p03h-answerFeedback.wrong h3 {
+  color: #a8613a;
+}
+
+.p03h-answerFeedback p {
+  margin: 4px 0;
+  color: #5f596e;
+  line-height: 1.6;
+}
+
+.p03h-scoreBadge {
+  margin-top: 8px;
+  padding: 9px 15px;
+  border-radius: 100px;
+  background: white;
+  color: #7056bb;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.p03h-teamsActions {
+  display: flex;
+  justify-content: center;
+  margin: 35px 0 22px;
+}
+
+.p03h-teamsFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: #8a7aa7;
+  font-size: 0.9rem;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .p03h-chatCard {
+    padding: 18px;
+  }
+
+  .p03h-chatMessage {
+    padding: 20px;
+    font-size: 1.08rem;
+  }
+
+  .p03h-answerOption {
+    padding: 14px;
+    font-size: 1rem;
+  }
+
+  .p03h-answerFeedback {
+    padding: 25px 18px;
+  }
+
+  .p03h-teamsActions button {
+    width: 100%;
+  }
+}
+
+/* ==========================================
+   PROJECT 03 — TEAMS FEEDBACK FIX
+   Compact Natalia + centered feedback
+========================================== */
+
+.p03h-teamsPage .p03h-answerFeedback {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  width: 100%;
+  box-sizing: border-box;
+  padding: 28px 32px;
+
+  border-radius: 22px;
+  text-align: center;
+}
+
+.p03h-teamsPage .p03h-answerFeedback.correct {
+  background: #eaf8ef;
+  border: 1px solid #bee8ce;
+}
+
+.p03h-teamsPage .p03h-answerFeedback.wrong {
+  background: #fff2ea;
+  border: 1px solid #f5d4bd;
+}
+
+/* Natalia's container */
+
+.p03h-teamsPage .p03h-feedbackNataliaWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 160px;
+  min-width: 160px;
+  max-width: 160px;
+  height: 170px;
+
+  flex: 0 0 160px;
+}
+
+/* Natalia image: fixed dimensions */
+
+.p03h-teamsPage img.p03h-feedbackNatalia {
+  position: relative;
+  z-index: 2;
+
+  display: block;
+  width: 145px !important;
+  max-width: 145px !important;
+  height: 160px !important;
+  max-height: 160px !important;
+
+  object-fit: contain;
+  flex: none;
+}
+
+/* Confetti / thinking swirl */
+
+.p03h-teamsPage img.p03h-feedbackDecoration {
+  position: absolute;
+  z-index: 1;
+
+  width: 170px !important;
+  max-width: 170px !important;
+  height: 170px !important;
+  max-height: 170px !important;
+
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.p03h-teamsPage .p03h-confetti {
+  top: -10px;
+  left: -5px;
+}
+
+.p03h-teamsPage .p03h-swirl {
+  top: -8px;
+  left: 0;
+}
+
+/* Centered feedback content */
+
+.p03h-teamsPage .p03h-feedbackContent {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+  min-width: 0;
+  max-width: 520px;
+  text-align: center;
+}
+
+.p03h-teamsPage .p03h-feedbackContent h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 1.25;
+}
+
+.p03h-teamsPage .p03h-feedbackExplanation,
+.p03h-teamsPage .p03h-correctAnswer {
+  margin: 0;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.p03h-teamsPage .p03h-scoreBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 9px 17px;
+  border-radius: 999px;
+  background: white;
+
+  color: #7057c8;
+  font-weight: 800;
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+  .p03h-teamsPage .p03h-answerFeedback {
+    flex-direction: column;
+    gap: 10px;
+    padding: 22px 18px;
+  }
+
+  .p03h-teamsPage .p03h-feedbackNataliaWrapper {
+    width: 140px;
+    min-width: 140px;
+    max-width: 140px;
+    height: 145px;
+    flex: 0 0 145px;
+  }
+
+  .p03h-teamsPage img.p03h-feedbackNatalia {
+    width: 125px !important;
+    max-width: 125px !important;
+    height: 140px !important;
+    max-height: 140px !important;
+  }
+
+  .p03h-teamsPage img.p03h-feedbackDecoration {
+    width: 150px !important;
+    max-width: 150px !important;
+    height: 150px !important;
+    max-height: 150px !important;
+  }
+
+  .p03h-teamsPage .p03h-feedbackContent h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* ==========================================
+   PROJECT 03 — ACTIVITY 02: EMAIL
+========================================== */
+
+.p03h-emailPage .p03h-emailDocument {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 28px;
+  background: #ffffff;
+  border: 1px solid #e6e0f1;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(65, 46, 106, 0.05);
+}
+
+.p03h-emailDocumentHeader {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 23px 28px;
+  background: #f7f3ff;
+  border-bottom: 1px solid #e9e1f5;
+}
+
+.p03h-emailDocumentIcon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: #eae1ff;
+  color: #7d68e9;
+}
+
+.p03h-emailDocumentHeader > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.p03h-emailDocumentHeader strong {
+  font-size: 1.25rem;
+  color: #241b42;
+}
+
+.p03h-emailDocumentHeader span {
+  color: #817594;
+  font-size: 0.9rem;
+}
+
+.p03h-emailMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 22px 28px;
+  border-bottom: 1px solid #eeeaf4;
+}
+
+.p03h-emailMeta > div {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.p03h-emailMeta span {
+  width: 50px;
+  color: #8a8197;
+  font-size: 0.9rem;
+}
+
+.p03h-emailMeta strong {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #352c4b;
+  font-weight: 600;
+}
+
+.p03h-emailBody {
+  padding: 28px 32px 34px;
+  font-size: 1.12rem;
+  line-height: 1.85;
+  color: #342b49;
+}
+
+.p03h-emailBody p {
+  margin: 0 0 22px;
+}
+
+.p03h-emailBody p:last-child {
+  margin-bottom: 0;
+}
+
+.p03h-emailGap {
+  display: inline;
+  padding: 4px 9px;
+  margin: 0 3px;
+  border-radius: 7px;
+  background: #eee7ff;
+  color: #7056d8;
+  font-weight: 800;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .p03h-emailDocumentHeader {
+    padding: 18px;
+  }
+
+  .p03h-emailDocumentHeader strong {
+    font-size: 1.08rem;
+  }
+
+  .p03h-emailMeta {
+    padding: 18px;
+  }
+
+  .p03h-emailBody {
+    padding: 22px 18px 26px;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+}
+
+/* ==========================================
+   PROJECT 03 — REALISTIC EMAIL FORMATTING
+========================================== */
+
+.p03h-emailPage .p03h-emailBody {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 32px 38px;
+
+  text-align: left !important;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: #342b49;
+}
+
+.p03h-emailPage .p03h-emailBody p {
+  display: block;
+  margin: 0 0 20px;
+
+  text-align: left !important;
+  line-height: 1.8;
+}
+
+.p03h-emailPage .p03h-emailBody p:last-child {
+  margin-bottom: 0;
+}
+
+/* Keep the grammar gap inside the sentence */
+
+.p03h-emailPage .p03h-emailGap {
+  display: inline;
+  white-space: normal;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .p03h-emailPage .p03h-emailBody {
+    padding: 24px 20px;
+    font-size: 1rem;
+  }
+
+  .p03h-emailPage .p03h-emailBody p {
+    margin-bottom: 18px;
+  }
+}
+
+/* ==========================================
+   PROJECT 03 — ACTIVITY 03: CHECKLIST
+========================================== */
+
+.p03h-checklistSection {
+  max-width: 1000px;
+  margin: 50px auto 40px;
+  text-align: center;
+}
+
+.p03h-checklistSection h2 {
+  margin: 12px 0;
+  font-size: 2.1rem;
+  color: #211735;
+}
+
+.p03h-checklistSection > p {
+  color: #756a89;
+  margin-bottom: 28px;
+}
+
+.p03h-checklistTable {
+  overflow: hidden;
+  border: 1px solid #e5def2;
+  border-radius: 20px;
+  background: white;
+  text-align: left;
+}
+
+.p03h-checklistHeader,
+.p03h-checklistRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.2fr;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 24px;
+}
+
+.p03h-checklistHeader {
+  background: #f2edfc;
+  color: #6753a8;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+}
+
+.p03h-checklistRow {
+  border-top: 1px solid #eee9f5;
+  color: #302545;
+}
+
+.p03h-checklistRow strong {
+  font-weight: 650;
+}
+
+.p03h-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  width: fit-content;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.p03h-status.ready {
+  background: #e8f7ed;
+  color: #26784d;
+}
+
+.p03h-status.missing {
+  background: #fff0ef;
+  color: #b74e55;
+}
+
+@media (max-width: 768px) {
+  .p03h-checklistSection {
+    margin: 35px auto 30px;
+  }
+
+  .p03h-checklistSection h2 {
+    font-size: 1.65rem;
+  }
+
+  .p03h-checklistHeader,
+  .p03h-checklistRow {
+    grid-template-columns: 1.4fr 0.8fr 1fr;
+    gap: 8px;
+    padding: 14px 10px;
+    font-size: 0.85rem;
+  }
+
+  .p03h-checklistHeader {
+    font-size: 0.7rem;
+  }
+
+  .p03h-status {
+    padding: 5px 7px;
+    font-size: 0.75rem;
+    gap: 4px;
+  }
+
+  .p03h-status svg {
+    width: 13px;
+    height: 13px;
+  }
+}

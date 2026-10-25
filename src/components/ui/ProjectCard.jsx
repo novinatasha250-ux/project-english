@@ -1,4 +1,6 @@
+
 import { useNavigate } from "react-router-dom";
+import { Clock3 } from "lucide-react";
 
 import "../../styles/project-card.css";
 import PrimaryButton from "./PrimaryButton";
@@ -11,6 +13,10 @@ export default function ProjectCard() {
 
       <div className="projectNumber">
         Project 01
+      </div>
+
+      <div className="homeProjectIcon">
+        <Clock3 size={32} strokeWidth={1.8} />
       </div>
 
       <h3>

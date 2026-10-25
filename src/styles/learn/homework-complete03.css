@@ -1,0 +1,399 @@
+
+/* PROJECT 03 - HOMEWORK COMPLETION */
+
+.hw03CompletePage {
+  min-height: 100vh;
+  padding: 50px 20px 100px;
+  background: #fff;
+  color: #29213c;
+}
+
+.hw03CompleteContainer {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* HERO */
+
+.hw03CompleteHero {
+  position: relative;
+  overflow: hidden;
+  padding: 55px 35px 65px;
+  border: 1px solid #e6dcfa;
+  border-radius: 36px;
+  background: linear-gradient(135deg, #faf7ff 0%, #eee6ff 100%);
+  text-align: center;
+}
+
+.hw03CompleteDecoration {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background: rgba(173, 145, 242, 0.12);
+  pointer-events: none;
+}
+
+.hw03CompleteDecorationOne {
+  top: -125px;
+  left: -100px;
+}
+
+.hw03CompleteDecorationTwo {
+  right: -130px;
+  bottom: -140px;
+}
+
+.hw03CompleteImageWrap {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto 16px;
+}
+
+.hw03CompleteNatalia {
+  display: block;
+  width: 220px;
+  max-width: 65vw;
+  height: auto;
+  object-fit: contain;
+  animation: hw03CompletePop 0.65s ease-out both;
+}
+
+.hw03CompleteSparkle {
+  position: absolute;
+  font-size: 35px;
+  animation: hw03CompleteFloat 3s ease-in-out infinite;
+}
+
+.hw03CompleteSparkleLeft {
+  top: 25%;
+  left: -35px;
+  color: #ac86f3;
+}
+
+.hw03CompleteSparkleRight {
+  top: 5%;
+  right: -38px;
+  animation-delay: 0.7s;
+}
+
+.hw03CompleteBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 18px;
+  border-radius: 100px;
+  background: #fff;
+  color: #7656d6;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.hw03CompleteHero h1 {
+  margin: 25px 0 14px;
+  color: #45336f;
+  font-size: clamp(35px, 5vw, 60px);
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+}
+
+.hw03CompleteHeroSubtitle {
+  max-width: 640px;
+  margin: 0 auto;
+  color: #706184;
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+.hw03CompleteStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 27px;
+  padding: 12px 17px;
+  border-radius: 12px;
+  background: #e7f7ed;
+  color: #258153;
+  font-weight: 750;
+}
+
+/* ACTIVITIES */
+
+.hw03CompleteSection {
+  margin-top: 75px;
+}
+
+.hw03CompleteSectionHeading {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.hw03CompleteSectionHeading > span,
+.hw03CompleteLearning > span {
+  color: #8062de;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.hw03CompleteSectionHeading h2 {
+  margin: 12px 0;
+  font-size: clamp(29px, 4vw, 40px);
+}
+
+.hw03CompleteSectionHeading p {
+  color: #756b84;
+  font-size: 18px;
+}
+
+.hw03CompleteActivityGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.hw03CompleteActivity {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  border: 1px solid #e8e1f4;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 10px 28px rgba(60, 40, 90, 0.04);
+}
+
+.hw03CompleteActivityIcon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 54px;
+  height: 54px;
+  border-radius: 17px;
+  background: #eee8ff;
+  color: #8062de;
+}
+
+.hw03CompleteActivityText {
+  flex: 1;
+  min-width: 0;
+}
+
+.hw03CompleteActivityNumber {
+  color: #917cb9;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.hw03CompleteActivity h3 {
+  margin: 6px 0;
+  font-size: 18px;
+}
+
+.hw03CompleteActivity p {
+  margin: 0;
+  color: #82778f;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.hw03CompleteActivityCheck {
+  flex-shrink: 0;
+  color: #37a574;
+}
+
+/* LEARNING SUMMARY */
+
+.hw03CompleteLearning {
+  margin-top: 70px;
+  padding: 48px 35px;
+  border: 1px solid #e5dbf8;
+  border-radius: 30px;
+  background: #f8f5ff;
+  text-align: center;
+}
+
+.hw03CompleteLearningIcon {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  border-radius: 20px;
+  background: #e9e0ff;
+  color: #7656d6;
+}
+
+.hw03CompleteLearning h2 {
+  max-width: 650px;
+  margin: 14px auto;
+  font-size: clamp(26px, 4vw, 38px);
+  line-height: 1.25;
+}
+
+.hw03CompleteLearning p {
+  max-width: 630px;
+  margin: 0 auto;
+  color: #726782;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.hw03CompleteGrammar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.hw03CompleteGrammar span {
+  padding: 12px 16px;
+  border: 1px solid #e3d8fa;
+  border-radius: 12px;
+  background: #fff;
+  color: #624b9a;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* FINAL MESSAGE */
+
+.hw03CompleteFinal {
+  padding: 75px 20px 20px;
+  text-align: center;
+}
+
+.hw03CompleteFinalTitle {
+  color: #8062de;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hw03CompleteFinal h2 {
+  margin: 15px 0;
+  font-size: clamp(29px, 4vw, 40px);
+}
+
+.hw03CompleteFinal h2 span {
+  color: #8062de;
+}
+
+.hw03CompleteFinal > p:not(.hw03CompleteFinalTitle) {
+  max-width: 620px;
+  margin: 0 auto;
+  color: #756a85;
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.hw03CompleteSignature {
+  margin-top: 25px;
+  color: #8062de;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.hw03CompleteActions {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+/* DIRECT ACCESS WITHOUT SUBMISSION */
+
+.hw03CompleteGate {
+  max-width: 600px;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.hw03CompleteGate h1 {
+  color: #45336f;
+  font-size: 42px;
+}
+
+.hw03CompleteGate p {
+  margin-bottom: 28px;
+  color: #756a85;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* ANIMATIONS */
+
+@keyframes hw03CompletePop {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes hw03CompleteFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .hw03CompletePage {
+    padding: 20px 14px 70px;
+  }
+
+  .hw03CompleteHero {
+    padding: 40px 20px 48px;
+    border-radius: 26px;
+  }
+
+  .hw03CompleteNatalia {
+    width: 170px;
+  }
+
+  .hw03CompleteHeroSubtitle {
+    font-size: 17px;
+  }
+
+  .hw03CompleteActivityGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .hw03CompleteActivity {
+    padding: 19px;
+  }
+
+  .hw03CompleteSection {
+    margin-top: 55px;
+  }
+
+  .hw03CompleteLearning {
+    margin-top: 50px;
+    padding: 35px 20px;
+  }
+
+  .hw03CompleteFinal {
+    padding-top: 55px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hw03CompleteNatalia,
+  .hw03CompleteSparkle {
+    animation: none;
+  }
+}

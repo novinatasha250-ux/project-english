@@ -1,9 +1,9 @@
 
 import { useNavigate } from "react-router-dom";
-
-import "../styles/module.css";
-import PrimaryButton from "./ui/PrimaryButton";
 import { BookOpen, NotebookPen } from "lucide-react";
+
+import PrimaryButton from "./ui/PrimaryButton";
+import "../styles/module.css";
 
 export default function Module03() {
   const navigate = useNavigate();
@@ -11,12 +11,16 @@ export default function Module03() {
   return (
     <div className="modulePage">
 
+      {/* BACK */}
+
       <button
         className="backButton"
         onClick={() => navigate("/")}
       >
         ← Back
       </button>
+
+      {/* PROJECT HEADER */}
 
       <p className="projectLabel">
         Project 03
@@ -30,7 +34,7 @@ export default function Module03() {
         Describing places
       </p>
 
-      {/* Lesson */}
+      {/* LESSON */}
 
       <div className="resourceCard">
 
@@ -55,7 +59,7 @@ export default function Module03() {
 
       </div>
 
-      {/* Homework */}
+      {/* HOMEWORK */}
 
       <div className="resourceCard">
 
@@ -75,21 +79,11 @@ export default function Module03() {
 
         </div>
 
-        <button
-          type="button"
-          disabled
-          style={{
-            padding: "14px 28px",
-            border: "none",
-            borderRadius: "14px",
-            background: "#e9e7ee",
-            color: "#77717f",
-            fontWeight: 700,
-            cursor: "not-allowed",
-          }}
+        <PrimaryButton
+          onClick={() => navigate("/project03/homework")}
         >
-          Coming Soon
-        </button>
+          Open
+        </PrimaryButton>
 
       </div>
 
