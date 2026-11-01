@@ -45,6 +45,13 @@ import HomeworkCalendar03 from "./components/HomeworkCalendar03";
 import HomeworkWriting03 from "./components/HomeworkWriting03";
 import HomeworkComplete03 from "./components/HomeworkComplete03";
 
+// PROJECT 04 — LESSON
+import Module04 from "./components/Module04";
+import Learn04 from "./components/Learn04";
+import Examples04 from "./components/Examples04";
+import Practice04 from "./components/Practice04";
+import LessonComplete04 from "./components/LessonComplete04";
+
 export default function App() {
   return (
     <>
@@ -94,6 +101,14 @@ export default function App() {
         <Route path="/project03/homework/calendar" element={<HomeworkCalendar03 />} />
         <Route path="/project03/homework/writing" element={<HomeworkWriting03 />} />
         <Route path="/project03/homework/complete" element={<HomeworkComplete03 />} />
+
+        {/* PROJECT 04 — LESSON */}
+        <Route path="/project04" element={<Module04 />} />
+        <Route path="/project04/grammar" element={<Learn04 />} />
+        <Route path="/project04/examples" element={<Examples04 />} />
+        <Route path="/project04/practice" element={<Practice04 />} />
+        <Route path="/project04/complete" element={<LessonComplete04 />}
+/>
       </Routes>
     </>
   );

@@ -1,13 +1,15 @@
 
+import { useNavigate } from "react-router-dom";
 import { Plane } from "lucide-react";
 
 import "../../styles/project-card.css";
 import PrimaryButton from "./PrimaryButton";
 
 export default function ProjectCard04() {
-  return (
-    <div className="projectCard comingSoonCard">
+  const navigate = useNavigate();
 
+  return (
+    <div className="projectCard">
       <div className="projectNumber">
         Project 04
       </div>
@@ -16,16 +18,17 @@ export default function ProjectCard04() {
         <Plane size={32} strokeWidth={1.8} />
       </div>
 
-      <h3>Countable & Uncountable</h3>
+      <h3>Countable &amp; Uncountable</h3>
 
       <p className="projectInfo">
         Mission Shanghai • A2 • 25 min
       </p>
 
-      <PrimaryButton disabled>
-        Coming Soon
+      <PrimaryButton
+        onClick={() => navigate("/project04")}
+      >
+        Start Project
       </PrimaryButton>
-
     </div>
   );
 }
