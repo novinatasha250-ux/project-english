@@ -1,0 +1,366 @@
+
+.p04arrival-page .p04arrival-chat {
+  display: grid;
+  gap: 17px;
+  padding: 24px;
+  border: 1px solid #eae5f4;
+  border-radius: 22px;
+  background: linear-gradient(160deg, #fbf9ff, #f2faf8);
+}
+
+.p04arrival-chatRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+}
+
+.p04arrival-avatar {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  background: #e8ddfa;
+  color: #8065b6;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.p04arrival-chatRow:nth-child(4n + 2) .p04arrival-avatar {
+  background: #dff5f0;
+  color: #478c80;
+}
+
+.p04arrival-chatRow:nth-child(4n + 3) .p04arrival-avatar {
+  background: #ffecdc;
+  color: #b87b53;
+}
+
+.p04arrival-bubble {
+  flex: 1;
+  min-width: 0;
+  padding: 17px 20px;
+  border: 1px solid #e9e4f2;
+  border-radius: 5px 19px 19px 19px;
+  background: white;
+  box-shadow: 0 5px 16px rgba(71, 51, 107, 0.035);
+}
+
+.p04arrival-bubble > strong {
+  display: block;
+  margin-bottom: 9px;
+  color: #8b71bf;
+  font-size: 13px;
+}
+
+.p04arrival-bubble > p {
+  margin: 0;
+  color: #37344d;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.p04arrival-sentence {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  color: #35324b;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.p04arrival-sentence input {
+  width: 145px;
+  max-width: 100%;
+  min-width: 0;
+  padding: 8px 11px;
+  border: 1.5px solid #c9b8e8;
+  border-radius: 10px;
+  outline: none;
+  background: #faf7ff;
+  color: #35324b;
+  font: inherit;
+  font-size: 14px;
+}
+
+.p04arrival-sentence input:focus {
+  border-color: #8f75c6;
+  box-shadow: 0 0 0 3px rgba(143, 117, 198, 0.12);
+}
+
+.p04arrival-sentence input:disabled {
+  opacity: 1;
+  color: #35324b;
+}
+
+.p04arrival-hint {
+  display: block;
+  margin-top: 8px;
+  color: #8b839b;
+  font-size: 12px;
+}
+
+.p04arrival-feedback {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 14px;
+}
+
+.p04arrival-feedbackCorrect {
+  background: #ecfaf4;
+  color: #337e6a;
+}
+
+.p04arrival-feedbackWrong {
+  background: #fff0ed;
+  color: #a65d58;
+}
+
+.p04arrival-feedback img {
+  width: 68px;
+  height: 68px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.p04arrival-feedback > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.p04arrival-feedback strong {
+  font-size: 14px;
+}
+
+.p04arrival-feedback p {
+  margin: 5px 0 0;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .p04arrival-page .p04arrival-chat {
+    padding: 13px;
+    gap: 13px;
+  }
+
+  .p04arrival-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 11px;
+    font-size: 14px;
+  }
+
+  .p04arrival-chatRow {
+    gap: 8px;
+  }
+
+  .p04arrival-bubble {
+    padding: 13px 12px;
+  }
+
+  .p04arrival-bubble > p,
+  .p04arrival-sentence {
+    font-size: 14px;
+  }
+
+  .p04arrival-sentence input {
+    width: 120px;
+    font-size: 13px;
+  }
+
+  .p04arrival-feedback {
+    align-items: flex-start;
+    gap: 7px;
+    padding: 9px;
+  }
+
+  .p04arrival-feedback img {
+    width: 46px;
+    height: 46px;
+  }
+}
+
+/* ==========================================
+   SEQUENTIAL CHAT — ACTIVITY 02
+========================================== */
+
+.p04arrival-sceneTabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.p04arrival-sceneTab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 10px;
+  border: 1px solid #e9e5f0;
+  border-radius: 13px;
+  background: #f8f7fb;
+  color: #9c97ab;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.p04arrival-sceneTabActive {
+  border-color: #cbb9ed;
+  background: #f0eafd;
+  color: #8065b6;
+}
+
+.p04arrival-sceneTabDone {
+  border-color: #c5e9dc;
+  background: #effaf5;
+  color: #4b9780;
+}
+
+.p04arrival-messenger {
+  overflow: hidden;
+  border: 1px solid #e9e3f1;
+  border-radius: 23px;
+  background: #fbfaff;
+}
+
+.p04arrival-messengerHeader {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 19px 23px;
+  border-bottom: 1px solid #e9e3f1;
+  background: white;
+}
+
+.p04arrival-groupIcon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: #ede5fb;
+  color: #8467bc;
+}
+
+.p04arrival-messengerHeader h2 {
+  margin: 0 0 5px;
+  color: #36314c;
+  font-size: 19px;
+}
+
+.p04arrival-messengerHeader p {
+  margin: 0;
+  color: #8d879e;
+  font-size: 12px;
+}
+
+.p04arrival-messages {
+  display: grid;
+  gap: 18px;
+  padding: 24px;
+  min-height: 220px;
+  background: linear-gradient(
+    155deg,
+    #faf7ff,
+    #f1faf8
+  );
+}
+
+.p04arrival-messages .p04arrival-chatRow {
+  animation: p04arrival-appear 0.3s ease both;
+}
+
+@keyframes p04arrival-appear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.p04arrival-filledCorrect,
+.p04arrival-filledWrong {
+  display: inline-block;
+  padding: 2px 7px;
+  border-radius: 7px;
+  font-weight: 800;
+}
+
+.p04arrival-filledCorrect {
+  background: #e4f8ee;
+  color: #27836c;
+}
+
+.p04arrival-filledWrong {
+  background: #fff0ed;
+  color: #bb6b61;
+}
+
+.p04arrival-send {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+  padding: 11px 17px;
+  border: none;
+  border-radius: 11px;
+  background: #8b73c5;
+  color: white;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.p04arrival-send:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.p04arrival-nextArea {
+  display: flex;
+  justify-content: flex-end;
+  padding: 18px 23px;
+  border-top: 1px solid #e9e3f1;
+  background: white;
+}
+
+@media (max-width: 600px) {
+  .p04arrival-sceneTabs {
+    gap: 5px;
+  }
+
+  .p04arrival-sceneTab {
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px 5px;
+    font-size: 10px;
+  }
+
+  .p04arrival-messengerHeader {
+    padding: 15px;
+  }
+
+  .p04arrival-messages {
+    padding: 14px 10px;
+    gap: 14px;
+  }
+
+  .p04arrival-nextArea {
+    padding: 15px;
+  }
+}

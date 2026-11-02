@@ -1,0 +1,236 @@
+
+.p04meet-page .p04meet-instructions {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  margin-bottom: 28px;
+  border-radius: 17px;
+  background: #f1edfc;
+  color: #7962b2;
+}
+
+.p04meet-instructions > svg {
+  flex-shrink: 0;
+}
+
+.p04meet-instructions strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #55467e;
+  font-size: 15px;
+}
+
+.p04meet-instructions p {
+  margin: 0;
+  color: #6c6481;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.p04meet-sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 30px 0 18px;
+  color: #8c72c2;
+}
+
+.p04meet-sectionTitle h2 {
+  margin: 0;
+  color: #37334f;
+  font-size: 22px;
+}
+
+.p04meet-taskList {
+  display: grid;
+  gap: 18px;
+}
+
+.p04meet-task {
+  padding: 24px;
+  border: 1px solid #eae5f3;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(59, 45, 95, 0.035);
+}
+
+.p04meet-taskTop {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.p04meet-number {
+  color: #9279c8;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.p04meet-label {
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #eaf7f4;
+  color: #579889;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.p04meet-speaker {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 14px;
+  color: #46415e;
+  font-size: 14px;
+}
+
+.p04meet-avatar {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 11px;
+  background: #ede5fb;
+  color: #8b6bc1;
+  font-weight: 800;
+}
+
+.p04meet-original {
+  padding: 16px 18px;
+  margin-bottom: 20px;
+  border-left: 4px solid #d2b6ee;
+  border-radius: 0 12px 12px 0;
+  background: #faf7ff;
+}
+
+.p04meet-original span {
+  display: block;
+  margin-bottom: 8px;
+  color: #947eaf;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.p04meet-original p {
+  margin: 0;
+  color: #39354e;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.p04meet-inputLabel {
+  display: block;
+  margin-bottom: 9px;
+  color: #5c5671;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.p04meet-task textarea {
+  display: block;
+  width: 100%;
+  min-height: 85px;
+  padding: 14px;
+  border: 1.5px solid #ded4ee;
+  border-radius: 12px;
+  outline: none;
+  resize: vertical;
+  background: #fff;
+  color: #353149;
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+.p04meet-task textarea:focus {
+  border-color: #997bcf;
+  box-shadow: 0 0 0 3px rgba(153, 123, 207, 0.12);
+}
+
+.p04meet-task textarea:disabled {
+  background: #faf9fc;
+  opacity: 1;
+}
+
+.p04meet-feedback {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-top: 18px;
+  padding: 17px;
+  border-radius: 15px;
+}
+
+.p04meet-feedbackCorrect {
+  background: #effaf5;
+  color: #357b69;
+}
+
+.p04meet-feedbackWrong {
+  background: #fff1ee;
+  color: #a76058;
+}
+
+.p04meet-feedback img {
+  width: 78px;
+  height: 78px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.p04meet-feedback > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.p04meet-feedbackHeading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 9px;
+}
+
+.p04meet-feedbackHeading strong {
+  font-size: 14px;
+}
+
+.p04meet-feedback p {
+  margin: 7px 0 0;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+@media (max-width: 600px) {
+  .p04meet-task {
+    padding: 17px 14px;
+  }
+
+  .p04meet-original {
+    padding: 13px;
+  }
+
+  .p04meet-original p {
+    font-size: 14px;
+  }
+
+  .p04meet-feedback {
+    padding: 11px;
+    gap: 9px;
+  }
+
+  .p04meet-feedback img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .p04meet-sectionTitle h2 {
+    font-size: 18px;
+  }
+}
