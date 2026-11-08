@@ -13,7 +13,7 @@ export default function Hero() {
       <section className="hero">
         <div className="homeHeroImage">
           <img
-            src="/natalia-wave.png"
+            src="/natalia-wave.gif"
             alt="Natalia welcoming students"
             className="heroCharacter"
           />
@@ -27,8 +27,6 @@ export default function Hero() {
           <h2>Welcome back!</h2>
 
           <p>Ready for today's project?</p>
-
-    
         </div>
       </section>
     </div>
