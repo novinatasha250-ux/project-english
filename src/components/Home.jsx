@@ -5,6 +5,7 @@ import UpcomingCard from "./ui/UpcomingCard";
 import ComingSoonCard from "./ui/ComingSoonCard";
 import ProjectCard04 from "./ui/ProjectCard04";
 import ProjectCard05 from "./ui/ProjectCard05";
+import ProjectCard06 from "./ui/ProjectCard06";
 
 import "../styles/home.css";
 
@@ -33,6 +34,7 @@ export default function Home() {
             <ComingSoonCard />
             <ProjectCard04 />
             <ProjectCard05 />
+            <ProjectCard06 />
           </div>
         </section>
       </div>

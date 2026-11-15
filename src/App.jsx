@@ -94,6 +94,30 @@ import HomeworkReport05 from "./components/HomeworkReport05";
 import HomeworkRecommendation05 from "./components/HomeworkRecommendation05";
 import HomeworkComplete05 from "./components/HomeworkComplete05";
 
+// ============================================
+// PROJECT 06
+// ============================================
+
+// Lesson
+import Module06 from "./components/Module06";
+import Learn06 from "./components/Learn06";
+import Examples06 from "./components/Examples06";
+import Practice06 from "./components/Practice06";
+import LessonComplete06 from "./components/LessonComplete06";
+
+// Homework
+import Homework06 from "./components/Homework06";
+import HomeworkMachines06 from "./components/HomeworkMachines06";
+import HomeworkMeeting06 from "./components/HomeworkMeeting06";
+import HomeworkReport06 from "./components/HomeworkReport06";
+import HomeworkRecommendation06 from "./components/HomeworkRecommendation06";
+import HomeworkComplete06 from "./components/HomeworkComplete06";
+
+
+// ============================================
+// APP ROUTES
+// ============================================
+
 export default function App() {
   return (
     <>
@@ -255,7 +279,7 @@ export default function App() {
         <Route
           path="/project05/homework/robots"
           element={<HomeworkRobots05 />}
-/>
+        />
         <Route
           path="/project05/homework/meeting"
           element={<HomeworkMeeting05 />}
@@ -265,14 +289,51 @@ export default function App() {
           element={<HomeworkReport05 />}
         />
         <Route
-  path="/project05/homework/recommendation"
-  element={<HomeworkRecommendation05 />}
+          path="/project05/homework/recommendation"
+          element={<HomeworkRecommendation05 />}
+        />
+        <Route
+          path="/project05/homework/complete"
+          element={<HomeworkComplete05 />}
+        />
+
+        {/* ====================================
+            PROJECT 06 — LESSON
+        ==================================== */}
+        <Route path="/project06" element={<Module06 />} />
+        <Route path="/project06/grammar" element={<Learn06 />} />
+        <Route path="/project06/examples" element={<Examples06 />} />
+        <Route path="/project06/practice" element={<Practice06 />} />
+        <Route
+          path="/project06/complete"
+          element={<LessonComplete06 />}
+        />
+
+        {/* PROJECT 06 — HOMEWORK */}
+        <Route
+          path="/project06/homework"
+          element={<Homework06 />}
+        />
+        <Route
+  path="/project06/homework/machines"
+  element={<HomeworkMachines06 />}
 />
 <Route
-  path="/project05/homework/complete"
-  element={<HomeworkComplete05 />}
+  path="/project06/homework/meeting"
+  element={<HomeworkMeeting06 />}
 />
-  
+<Route
+  path="/project06/homework/report"
+  element={<HomeworkReport06 />}
+/>
+<Route
+  path="/project06/homework/recommendation"
+  element={<HomeworkRecommendation06 />}
+/>
+<Route
+  path="/project06/homework/complete"
+  element={<HomeworkComplete06 />}
+/>
       </Routes>
     </>
   );
